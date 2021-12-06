@@ -1,6 +1,6 @@
 <div class="bread__crumb" >
 			<span *ngFor="let breadcrumb of breadcrumbs; let last = last" >
-	      <a [routerLink]="breadcrumb.url"  routerLinkActive="bread__crumb-active">{{breadcrumb.label}}  </a >
+	      <a [routerLink]="breadcrumb.url" routerLinkActive="bread__crumb-active" >{{breadcrumb.label}}  </a >
 	      <span *ngIf="!last" > > </span >
 			</span >
 
