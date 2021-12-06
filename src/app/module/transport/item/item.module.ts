@@ -11,8 +11,10 @@ import { ReactiveFormsModule }   from '@angular/forms';
 import { ItemsTooltipComponent } from './tooltip/items-tooltip/items-tooltip.component';
 import { NewItemsComponent }     from './components/new-items/new-items.component';
 import { ListItemsComponent }    from './components/list-items/list-items.component';
+import { TableMaterialModule }   from '../../../shared/component/table/table-material.module';
+import { MatTableModule }        from '@angular/material/table';
 
-@NgModule( {
+@NgModule({
   declarations: [
     ItemComponent,
     ItemsTooltipComponent,
@@ -28,7 +30,7 @@ import { ListItemsComponent }    from './components/list-items/list-items.compon
     SharedModule,
     MatInputModule,
     ReactiveFormsModule,
+    TableMaterialModule,
   ],
-} )
-export class ItemModule {
-}
+})
+export class ItemModule {}
