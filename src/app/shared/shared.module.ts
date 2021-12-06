@@ -8,8 +8,10 @@ import {
 }                                 from './utils/services';
 import { ElixSpinnerComponent }   from './component/spinner/elix-spinner.component';
 import { ElixJumbotronComponent } from './component/jumbotron/elix-jumbotron.component';
+import { BreadCrumbComponent }    from './component/bread-crumb/bread-crumb.component';
+import { RouterModule }           from '@angular/router';
 
-@NgModule( {
+@NgModule({
   declarations: [
     ElixSpinnerComponent,
     ElixDragDirective,
@@ -17,8 +19,9 @@ import { ElixJumbotronComponent } from './component/jumbotron/elix-jumbotron.com
     BtnPrimaryDirective,
     InputPrimaryDirective,
     TooltipDirectiveDirective,
+    BreadCrumbComponent,
   ],
-  imports: [ CommonModule ],
+  imports: [CommonModule, RouterModule],
   exports: [
     ElixSpinnerComponent,
     ElixDragDirective,
@@ -26,7 +29,7 @@ import { ElixJumbotronComponent } from './component/jumbotron/elix-jumbotron.com
     BtnPrimaryDirective,
     InputPrimaryDirective,
     TooltipDirectiveDirective,
+    BreadCrumbComponent,
   ],
-} )
-export class SharedModule {
-}
+})
+export class SharedModule {}

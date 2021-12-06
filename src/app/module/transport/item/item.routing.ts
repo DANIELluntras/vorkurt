@@ -8,9 +8,6 @@ const routes : Routes = [
   {
     path: '',
     component: ItemComponent,
-    data: {
-      breadCrumb: 'Item',
-    },
     children: [
       {
         path: '',

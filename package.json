@@ -9,15 +9,16 @@
     "ng": "ng",
     "start": "ng serve --port 4201 --open",
     "build": "ng build",
-    "watch": "ng build --wh --configuration development",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
-    "storybook": "npm run docs:json && startrybook -p 6006",
+    "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "push": "npx @open-sauced/conventional-commit"
+    "push": "npx @open-sauced/conventional-commit",
+    "commit": "cz"
   },
   "private": true,
   "dependencies": {
@@ -62,6 +63,7 @@
     "babel-loader": "^8.2.3",
     "concurrently": "^2.2.0",
     "cypress": "8.7.0",
+    "cz-conventional-changelog": "^3.3.0",
     "jasmine-core": "^3.10.1",
     "karma": "^6.3.6",
     "karma-chrome-launcher": "^3.1.0",
