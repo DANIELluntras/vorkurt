@@ -1,5 +1,5 @@
-<table mat-table [dataSource]="dataSource" >
+<mat-table mat-table [dataSource]="dataSource" >
 	<ng-content ></ng-content >
-	<tr mat-header-row *matHeaderRowDef="columns; sticky:true" ></tr >
-	<tr mat-row *matRowDef="let row; columns: columns" ></tr >
-</table >
+	<mat-header-row class="header-color" mat-header-row *matHeaderRowDef="columns" ></mat-header-row >
+	<mat-row mat-row *matRowDef="let row; columns: columns" ></mat-row >
+</mat-table >
