@@ -5,7 +5,7 @@ import { MatColumnDef }                from '@angular/material/table';
   selector: 'app-base',
   template: '',
 })
-export class BaseColumn {
+export abstract class BaseColumn {
 
   @ViewChild(MatColumnDef) columnDef : MatColumnDef
 

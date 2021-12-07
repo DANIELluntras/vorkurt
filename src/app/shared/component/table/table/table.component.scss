@@ -5,14 +5,12 @@ elix-table {
 	border-radius   : 0.5em 0.5em 0 0;
 	overflow        : hidden;
   }
-
-
+  
   mat-header-row {
 	min-height : 1.5rem;;
 
 	mat-header-cell {
 	  min-height : inherit;
-
 	}
   }
 
@@ -21,7 +19,6 @@ elix-table {
   }
 
   .header-color {
-	background : var(--primary-color-background);
-
+	background : #2d333b;
   }
 }
