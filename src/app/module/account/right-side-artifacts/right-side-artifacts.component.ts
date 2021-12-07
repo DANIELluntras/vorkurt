@@ -12,4 +12,7 @@ export class RightSideArtifactsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  hy(){
+    console.log('Salut, Sergiu!')
+  }
 }
