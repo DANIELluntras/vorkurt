@@ -1,9 +1,39 @@
 elix-table {
+  transition : all .5s ease-in;
+  color      : var(--primary-color-text);
+
   mat-table {
 	color           : transparent;
 	border-collapse : collapse;
 	border-radius   : 0.5em 0.5em 0 0;
 	overflow        : hidden;
+  }
+
+  mat-header-row {
+
+	mat-header-cell {
+	  justify-content : center;
+	  border-spacing  : 2rem;
+	}
+  }
+
+  mat-row {
+	color      : var(--primary-color-text);
+	min-height : 19px;
+
+	&:hover {
+	  background : rgba(1, 1, 222, 0.1);
+
+	}
+
+	mat-cell {
+	  justify-content : center;
+
+	  &:hover {
+		color   : red !important;
+		opacity : 1
+	  }
+	}
   }
 
   mat-header-row {

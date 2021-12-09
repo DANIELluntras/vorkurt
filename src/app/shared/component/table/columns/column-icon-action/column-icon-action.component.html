@@ -1,0 +1,8 @@
+<ng-container [matColumnDef]="field" >
+	<mat-header-cell mat-header-cell *matHeaderCellDef >{{name}}</mat-header-cell >
+	<mat-cell mat-cell *matCellDef="let element" >
+		<button mat-button >
+			<mat-icon [svgIcon]="iconClass" ></mat-icon >
+		</button >
+	</mat-cell >
+</ng-container >
