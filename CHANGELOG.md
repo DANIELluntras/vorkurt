@@ -1,3 +1,10 @@
+### [1.3.2](https://github.com/NsdHSO/vorkurt/compare/v1.3.1...v1.3.2) (2021-12-11)
+
+
+### Continuous Integration
+
+* migrate angular 13 ([#50](https://github.com/NsdHSO/vorkurt/issues/50)) ([1cddcff](https://github.com/NsdHSO/vorkurt/commit/1cddcff31d062d2fe9b43821246f55e00193253f))
+
 ### [1.3.1](https://github.com/NsdHSO/vorkurt/compare/v1.3.0...v1.3.1) (2021-12-04)
 
 
