@@ -15,11 +15,11 @@ import {MatBadgeModule} from "@angular/material/badge";
 import {NotificationComponent} from "./tooltip/notification/notification.component";
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    PopUpLoginComponent,
-    NotificationComponent
-  ],
+    declarations: [
+        HeaderComponent,
+        PopUpLoginComponent,
+        NotificationComponent
+    ],
     imports: [
         OverlayModule,
         MatIconModule,
@@ -32,10 +32,7 @@ import {NotificationComponent} from "./tooltip/notification/notification.compone
         MatTooltipModule,
         MatProgressBarModule,
         MatBadgeModule,
-    ],
-  entryComponents: [
-    PopUpLoginComponent
-  ],
+    ]
 })
 export class HeaderModule {
 }

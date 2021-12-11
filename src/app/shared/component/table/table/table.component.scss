@@ -18,20 +18,40 @@ elix-table {
   }
 
   mat-row {
+	transition : all ease-in-out .1s;
 	color      : var(--primary-color-text);
 	min-height : 19px;
+	position   : relative;
+
+	textarea {
+	  outline : none
+	}
 
 	&:hover {
 	  background : rgba(1, 1, 222, 0.1);
 
 	}
 
+
 	mat-cell {
 	  justify-content : center;
+	  position        : relative;
+	  min-height      : 2rem;
 
 	  &:hover {
 		color   : red !important;
-		opacity : 1
+		opacity : 1;
+
+	  }
+
+	  textarea {
+		background : inherit;
+		height : 1.95rem;
+
+		&:focus-visible {
+		  outline : none;
+		  border  : 1px solid var(--primary-color-input)
+		}
 	  }
 	}
   }

@@ -22,17 +22,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^12.2.11",
+    "@angular/animations": "^13.1.0",
     "@angular/cdk": "^12.2.11",
-    "@angular/common": "^12.2.11",
-    "@angular/compiler": "^12.2.11",
-    "@angular/core": "^12.2.11",
+    "@angular/common": "^13.1.0",
+    "@angular/compiler": "^13.1.0",
+    "@angular/core": "^13.1.0",
     "@angular/fire": "^7.2.0",
-    "@angular/forms": "^12.2.11",
+    "@angular/forms": "^13.1.0",
     "@angular/material": "^12.2.11",
-    "@angular/platform-browser": "^12.2.11",
-    "@angular/platform-browser-dynamic": "^12.2.11",
-    "@angular/router": "^12.2.11",
+    "@angular/platform-browser": "^13.1.0",
+    "@angular/platform-browser-dynamic": "^13.1.0",
+    "@angular/router": "^13.1.0",
     "ag-grid-angular": "^26.1.0",
     "firebase": "^9.6.1",
     "leaflet": "^1.7.1",
@@ -42,9 +42,9 @@
     "zone.js": "^0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.2.11",
-    "@angular/cli": "^12.2.11",
-    "@angular/elements": "^12.2.11",
+    "@angular-devkit/build-angular": "^13.1.0",
+    "@angular/cli": "^13.1.0",
+    "@angular/elements": "^13.1.0",
     "@babel/core": "^7.15.8",
     "@compodoc/compodoc": "^1.1.15",
     "@cypress/schematic": "^1.5.1",
@@ -73,6 +73,6 @@
     "lite-server": "^2.6.1",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.17",
-    "typescript": "^4.3.5"
+    "typescript": "^4.5.3"
   }
 }
