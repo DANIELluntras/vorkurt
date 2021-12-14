@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/NsdHSO/vorkurt/compare/v1.3.2...v1.4.0) (2021-12-14)
+
+
+### Features
+
+* material table refectoring ([#52](https://github.com/NsdHSO/vorkurt/issues/52)) ([17c4f0d](https://github.com/NsdHSO/vorkurt/commit/17c4f0d9007e05c95acd5155ad79c767513a9086))
+
 ### [1.3.2](https://github.com/NsdHSO/vorkurt/compare/v1.3.1...v1.3.2) (2021-12-11)
 
 
