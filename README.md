@@ -28,7 +28,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 For using material table you follow the next step
 1. at ngOnInit you need to put the initialize table, it should receive an array of objects like this:
 ``` { 
-{
+ datasource={
   actions:
   { 
     iconClass: "class for icon",
