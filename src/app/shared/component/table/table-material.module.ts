@@ -7,10 +7,12 @@ import { ColumnAreaTextComponent }   from './columns/column-area-text/column-are
 import { ColumnIconActionComponent } from './columns/column-icon-action/column-icon-action.component';
 import { MatIconModule }             from '@angular/material/icon';
 import { MatButtonModule }           from '@angular/material/button';
+import { MatInputModule }            from '@angular/material/input';
+import { FormsModule }               from '@angular/forms';
 
 @NgModule( {
 	declarations: [ TableComponent, ColumnTextComponent, ColumnAreaTextComponent, ColumnIconActionComponent ],
-	imports: [ CommonModule, MatTableModule, MatIconModule, MatButtonModule ],
+	imports: [ CommonModule, MatTableModule, MatIconModule, MatButtonModule, MatInputModule,FormsModule ],
 	exports: [ TableComponent, ColumnTextComponent, ColumnAreaTextComponent, ColumnIconActionComponent ],
 } )
 export class TableMaterialModule {

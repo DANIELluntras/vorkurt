@@ -7,9 +7,10 @@ import {
   QueryList,
   ViewChild,
   ViewEncapsulation,
-}                                 from '@angular/core';
-import { MatColumnDef, MatTable } from '@angular/material/table';
-import { BaseColumn }             from '../base-column';
+}                                   from '@angular/core';
+import { MatColumnDef, MatTable }   from '@angular/material/table';
+import { BaseColumn }               from '../base-column';
+import { IDataSourceMaterialTable } from '../../../utils/interfaces/shared/iData-source-material-table';
 
 @Component( {
   selector: 'elix-table',
@@ -30,6 +31,8 @@ export class TableComponent<T> implements AfterViewInit {
   
   // after the <ng-content> has been initialized, the column definitions are available.
   ngAfterViewInit () : void {
+    console.log(this.dataSource)
+  
     this.columnsToDispaly = this.columnDefs.map(
         (resp : BaseColumn) => resp.columnDef.name
     );
@@ -38,6 +41,7 @@ export class TableComponent<T> implements AfterViewInit {
         .forEach( (rep : MatColumnDef) => this.table.addColumnDef( rep ) );
     
     try {
+      
       let duplicate = this.columnsToDispaly.filter(
           (columnDisplay : string, index : number, self : string[]) =>
               index === self.findIndex( (value : string) => value === columnDisplay )

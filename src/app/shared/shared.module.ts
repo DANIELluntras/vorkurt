@@ -23,7 +23,7 @@ import { RouterModule } from '@angular/router';
     TooltipDirectiveDirective,
     BreadCrumbComponent,
   ],
-  imports: [ CommonModule, RouterModule ],
+  imports: [CommonModule, RouterModule],
   exports: [
     ElixSpinnerComponent,
     ElixDragDirective,
@@ -33,6 +33,5 @@ import { RouterModule } from '@angular/router';
     TooltipDirectiveDirective,
     BreadCrumbComponent,
   ],
-} )
-export class SharedModule {
-}
+})
+export class SharedModule {}

@@ -38,15 +38,9 @@ elix-table {
 	  position        : relative;
 	  min-height      : 2rem;
 
-	  &:hover {
-		color   : red !important;
-		opacity : 1;
-
-	  }
-
 	  textarea {
 		background : inherit;
-		height : 1.95rem;
+		height     : 1.95rem;
 
 		&:focus-visible {
 		  outline : none;

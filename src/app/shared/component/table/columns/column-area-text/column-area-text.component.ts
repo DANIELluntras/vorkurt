@@ -8,5 +8,4 @@ import { BaseColumn } from '../../base-column';
 	providers: [ { provide: BaseColumn, useExisting: ColumnAreaTextComponent } ],
 } )
 export class ColumnAreaTextComponent extends BaseColumn {
-
 }
