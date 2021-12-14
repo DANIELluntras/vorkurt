@@ -27,7 +27,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Material Shared 
   For using material table you follow the next step 
     1. at ngOnInit you need to put the initialize table, it should receive an array of objects like this:
-        { actions: 
+       ` { actions: 
           { iconClass: "class for icon",
             classCss: " class what you need to maipulate in DOM",
             method: " a function "
@@ -35,15 +35,21 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
            editable: "If you want the table be editable: true/false",
            data for table { ES 6 } ...dataTable
          }
+        `
     2. In html template you need to declare
-        <elix-table [dataSource] ="data at you initialized in ngOnInit">
+       ` <elix-table [dataSource] ="data at you initialized in ngOnInit">
           <elix-column-text className="what class css you want for this column" 
                             [iconClass]="Optional" 
                             field="column from table" 
                             name="what name you want to do"> ...
           <elix-column-area-text require !!!  field name > ...
         </elix-table>
+        `
+      
+      
       # and enjoy at this beautiful library
+      
+      
 ## Angular Json
 
 Add all file from bootstrap such as style
