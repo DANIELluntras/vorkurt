@@ -32,9 +32,10 @@
     "@angular/material": "^12.2.11",
     "@angular/platform-browser": "^13.1.0",
     "@angular/platform-browser-dynamic": "^13.1.0",
+    "@angular/router": "^13.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@angular/router": "^13.1.0",
+    "@tailwindcss/postcss7-compat": "^2.1.4",
     "ag-grid-angular": "^26.1.0",
     "firebase": "^9.6.1",
     "leaflet": "^1.7.1",
@@ -74,7 +75,6 @@
     "karma-jasmine-html-reporter": "^1.7.0",
     "lite-server": "^2.6.1",
     "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17",
     "typescript": "^4.5.3"
   }
 }

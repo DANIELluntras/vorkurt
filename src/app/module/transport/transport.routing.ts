@@ -3,6 +3,7 @@ import { RouterModule, Routes }    from '@angular/router';
 import { TransportFrameComponent } from './transport-frame.component';
 import { routerArray }             from '../../config/global/config-router';
 import { PlBillingResolver }       from '../../shared/utils/services/resolvers/pl-billing/pl-billing.resolver';
+import { ListItemsResolver }       from './item/utils/services';
 
 const routes : Routes = [
   {
@@ -19,9 +20,11 @@ const routes : Routes = [
         },
       },
       {
-        path: 'item',
+        path: 'items',
         loadChildren: () =>
             import('./item/item.module').then( (m) => m.ItemModule ),
+        resolve: { data: ListItemsResolver },
+  
       },
       {
         path: 'pck-collection',

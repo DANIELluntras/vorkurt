@@ -20,7 +20,6 @@ export class ElixSpinnerComponent implements OnInit {
 
   ngOnInit(): void {
     this._spinnerStateService.getState$
-      .pipe(tap((res) => console.log(res)))
       .subscribe(resp => this._showSppiner = resp)
   }
 

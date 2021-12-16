@@ -8,15 +8,4 @@ import { BaseColumn } from '../../base-column';
 	providers: [ { provide: BaseColumn, useExisting: ColumnIconActionComponent } ],
 } )
 export class ColumnIconActionComponent extends BaseColumn {
-	a : any;
-	
-	ngOnInit () {
-		// eval()
-		console.log( this.a );
-	}
-	
-	tes () {
-		console.log( this );
-	}
-	
 }

@@ -27,7 +27,14 @@
 			<div *ngIf="!activeRoute" >
 				<router-outlet ></router-outlet >
 			</div >
-
+			<div *ngIf="activeRoute" class="flex flex-col justify-center item-center mt-24 transport__img" >
+				<div class="flex justify-center transport__airplane" >
+					<img src="assets/img/transport.jpeg" >
+				</div >
+				<div >
+					<a routerLink="items" ></a >
+				</div >
+			</div >
 		</div >
 	</div >
 

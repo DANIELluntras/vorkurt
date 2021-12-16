@@ -38,8 +38,8 @@ export const routerArray = Object.freeze( {
   ] as IConfigRouter[],
   tms: [
     {
-      name: 'Item',
-      path: 'item',
+      name: 'Items',
+      path: 'items',
       icon: 'fa_solid:pencil-alt',
     },
     {

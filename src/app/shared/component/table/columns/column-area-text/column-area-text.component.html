@@ -1,6 +1,9 @@
 <ng-container [matColumnDef]="field" >
 	<mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef >{{name}}</mat-header-cell >
 	<mat-cell [class]="className" mat-cell *matCellDef="let element" >
-		<textarea matInput [(ngModel)]="element[field]" ></textarea >
+		<textarea matInput
+		          [(ngModel)]="element[field]"
+		          [disabled]="element.editable"
+		          [ngStyle]="{'color': 'black'}" ></textarea >
 	</mat-cell >
 </ng-container >

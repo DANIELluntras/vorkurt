@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IActionMaterialColumn }                from '../../../../../shared/utils/interfaces/shared';
+import { ItemListService }                      from '../../utils/services';
+import { INewItemTypes }                        from '../../utils/interfaces';
 
 export interface PeriodicElement {
 	name : string;
@@ -66,24 +68,34 @@ const ELEMENT_DATA : PeriodicElement[] = [
 } )
 export class ListItemsComponent implements OnInit {
 	test = 'sfdas';
-	dataSource : PeriodicElement[] | any;
+	dataSource : INewItemTypes[] | any;
 	
-	constructor () {
+	constructor (private _listItem : ItemListService) {
 	}
 	
 	ngOnInit () : void {
+		this._listItem.dataComming$.subscribe( (resp : INewItemTypes[]) => {
+				this.dataSource = resp.map( resp => {
+						return {
+							actions: this.openAction(),
+							editable: false, ...resp,
+						};
+					},
+				);
 		
-		
-		this.dataSource = ELEMENT_DATA.map( resp => {
-			return { actions: this.openAction(), editable: false, ...resp };
-		} );
+				},
+		);
+		// {
+		// 	actions: this.openAction(),
+		// 		editable: false, ...respp,
+		// },
 	}
 	
 	openAction () : IActionMaterialColumn [] {
 		return [ {
 			iconClass: 'fa_solid:check',
 			classCss: 'check',
-			method: (row : any) => row.position,
+			method: (row : any) => row.editable = !row.editable,
 		}, {
 			iconClass: 'fa_solid:check',
 			classCss: 'check',
