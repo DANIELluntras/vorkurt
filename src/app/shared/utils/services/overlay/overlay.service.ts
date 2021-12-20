@@ -1,19 +1,23 @@
 import {Injectable} from '@angular/core';
 import {Overlay} from "@angular/cdk/overlay";
 import {ComponentPortal} from "@angular/cdk/portal";
+import {configOverlay} from '../../../../config/global/overlay';
+import {SharedArrowService} from "../table/shared-arrow.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OverlayService {
   private overlayRef: any;
-  private component: ComponentPortal<any>
+  private component: ComponentPortal<any>;
 
-  constructor(private _ovelay: Overlay) {
+  constructor(private _ovelay: Overlay, private _sharedArrow: SharedArrowService) {
   }
 
   display(element: any, exampleOverlayComponent: any) {
-    const target = element
+    this._sharedArrow.open(element)
+
+    const target = element;
     this.overlayRef = this._ovelay.create({
       hasBackdrop: true,
       backdropClass: 'cdk-overlay-transparent-backdrop',
@@ -21,41 +25,21 @@ export class OverlayService {
       positionStrategy: this._ovelay.position()
         .flexibleConnectedTo(target)
         .withPositions([
-          {
-            originX: 'start',
-            originY: 'bottom',
-            overlayX: 'start',
-            overlayY: 'top',
-          },
-          {
-            originX: 'center',
-            originY: 'top',
-            overlayX: 'end',
-            overlayY: 'bottom',
-          },
-          {
-            originX: 'end',
-            originY: 'top',
-            overlayX: 'start',
-            overlayY: 'top',
-          },
-          {
-            originX: 'start',
-            originY: 'top',
-            overlayX: 'end',
-            overlayY: 'top',
-          },
+          configOverlay.bottomLeft,
+          configOverlay.bottomRight,
+          configOverlay.topLeft,
+          configOverlay.topRight,
         ]),
-    })
+    });
     this.component = new ComponentPortal(exampleOverlayComponent);
     this.overlayRef.attach(this.component);
     this.overlayRef.backdropClick().subscribe(() => {
-      this.overlayRef.detach()
-      this.overlayRef.dispose()
+      this.overlayRef.detach();
+      this.overlayRef.dispose();
     });
   }
 
   closeOverlay() {
-    this.overlayRef.detach()
+    this.overlayRef.detach();
   }
 }
