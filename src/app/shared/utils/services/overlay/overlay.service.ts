@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Overlay} from "@angular/cdk/overlay";
 import {ComponentPortal} from "@angular/cdk/portal";
 import {configOverlay} from '../../../../config/global/overlay';
-import {SharedArrowService} from "../table/shared-arrow.service";
 
 @Injectable({
   providedIn: 'root',
@@ -11,11 +10,10 @@ export class OverlayService {
   private overlayRef: any;
   private component: ComponentPortal<any>;
 
-  constructor(private _ovelay: Overlay, private _sharedArrow: SharedArrowService) {
+  constructor(private _ovelay: Overlay) {
   }
 
   display(element: any, exampleOverlayComponent: any) {
-    this._sharedArrow.open(element)
 
     const target = element;
     this.overlayRef = this._ovelay.create({
