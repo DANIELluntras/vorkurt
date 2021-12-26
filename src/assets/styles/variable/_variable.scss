@@ -1,5 +1,5 @@
 $testVariable : #fff;
-
+$backgroundPrimary: #373e47;
 :root {
   --primary-color-background   : #2d333b;
   --secondary-color-background : #22272e;
@@ -8,6 +8,7 @@ $testVariable : #fff;
   --second-primary-text : #EC775C;
   --primary-color-input: #258EA6;
   --primary-background-input: #E7E6F7;
-  --secondary-input-background: #1c2128
+  --secondary-input-background: #1c2128;
+  --backgroundPrimary: #373e47
 }
 

@@ -1,19 +1,39 @@
-import { NgModule }                  from '@angular/core';
-import { CommonModule }              from '@angular/common';
-import { TableComponent }            from './table/table.component';
-import { ColumnTextComponent }       from './columns/column-text/column-text.component';
-import { MatTableModule }            from '@angular/material/table';
-import { ColumnAreaTextComponent }   from './columns/column-area-text/column-area-text.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TableComponent } from './table/table.component';
+import { ColumnTextComponent } from './columns/column-text/column-text.component';
+import { MatTableModule } from '@angular/material/table';
+import { ColumnAreaTextComponent } from './columns/column-area-text/column-area-text.component';
 import { ColumnIconActionComponent } from './columns/column-icon-action/column-icon-action.component';
-import { MatIconModule }             from '@angular/material/icon';
-import { MatButtonModule }           from '@angular/material/button';
-import { MatInputModule }            from '@angular/material/input';
-import { FormsModule }               from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import {SharedModule} from "../../shared.module";
+import {TooltipComponent} from "../tooltip/tooltip.component";
 
-@NgModule( {
-	declarations: [ TableComponent, ColumnTextComponent, ColumnAreaTextComponent, ColumnIconActionComponent ],
-	imports: [ CommonModule, MatTableModule, MatIconModule, MatButtonModule, MatInputModule,FormsModule ],
-	exports: [ TableComponent, ColumnTextComponent, ColumnAreaTextComponent, ColumnIconActionComponent ],
-} )
-export class TableMaterialModule {
-}
+@NgModule({
+  declarations: [
+    TableComponent,
+    ColumnTextComponent,
+    ColumnAreaTextComponent,
+    ColumnIconActionComponent,
+    TooltipComponent
+  ],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+  ],
+  exports: [
+    TableComponent,
+    ColumnTextComponent,
+    ColumnAreaTextComponent,
+    ColumnIconActionComponent,
+    TooltipComponent
+  ],
+})
+export class TableMaterialModule {}

@@ -13,6 +13,7 @@ import { NewItemsComponent }     from './components/new-items/new-items.componen
 import { ListItemsComponent }    from './components/list-items/list-items.component';
 import { TableMaterialModule }   from '../../../shared/component/table/table-material.module';
 import { MatTableModule }        from '@angular/material/table';
+import {PortalModule} from "@angular/cdk/portal";
 
 @NgModule({
   declarations: [
@@ -21,16 +22,17 @@ import { MatTableModule }        from '@angular/material/table';
     NewItemsComponent,
     ListItemsComponent,
   ],
-  imports: [
-    CommonModule,
-    AppItemRouting,
-    MatIconModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    SharedModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    TableMaterialModule,
-  ],
+    imports: [
+        CommonModule,
+        AppItemRouting,
+        MatIconModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        SharedModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        TableMaterialModule,
+        PortalModule,
+    ],
 })
 export class ItemModule {}

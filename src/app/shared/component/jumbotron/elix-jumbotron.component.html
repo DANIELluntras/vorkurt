@@ -1,6 +1,6 @@
-<div
-  class="vorkurt__color-background border-2 elix__shared-border-color border-solid rounded-lg m-2">
-  <div class="pl-2 pr-2" *ngIf="type === 'post'">
+<div  *ngIf="type === 'post'"
+  class="pl-2 text-white  border-2 elix__shared-border-color border-solid rounded-lg m-2">
+  <div class="pl-2 pr-2">
     <div class="flex">
       <div class="flex-1">
         <h1>TItle</h1>
@@ -26,7 +26,16 @@
     </footer>
   </div>
 
-  <div class="w-96 pl-2 pr-2" *ngIf="type === 'template'">
+  <div class="w-96 pl-2 pr-2" >
+    <div>
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+</div>
+<div
+  class=" text-white  border-2 elix__shared-border-color border-solid rounded-lg m-2">
+  <div class="p-2.5 " *ngIf="type ==='tooltip'">
     <div>
       <ng-content></ng-content>
     </div>

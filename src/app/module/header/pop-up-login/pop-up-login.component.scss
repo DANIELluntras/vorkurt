@@ -1,9 +1,18 @@
-.elix__border-color{
+.elix__border-color {
   border-color: #1ea7fd;
   box-shadow: 2px 1px 8px blue, -8px 0px 8px;
-  position: absolute;
   z-index: 100000000;
   height: min-content;
+  position: relative;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+
+  .pop__login-progress {
+    position: absolute;
+    top: 0
+
+  }
 }
 
 h1 {

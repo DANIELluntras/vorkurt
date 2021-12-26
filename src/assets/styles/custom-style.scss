@@ -1,3 +1,4 @@
+@import "src/assets/styles/variable/variable";
 @keyframes primary-button {
   from {
 	opacity    : 0;
@@ -63,6 +64,19 @@
 
 .vorkurt__color-background {
   background : #373e47;
+}
+
+.elix__arrow{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  box-shadow:  -1px 0.8px rgb(100 100 100);
+  background: var(--backgroundPrimary);
+  border-color: transparent transparent rgba(234, 232, 232, 0.33) rgba(234, 232, 232, 0.33);
+  border-style: solid;
+  border-width: 1px;
 }
 
 .vorkurt__border-color {

@@ -1,26 +1,25 @@
-import { NgModule }     from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   BtnPrimaryDirective,
   ElixDragDirective,
   InputPrimaryDirective,
-  TooltipDirectiveDirective,
-}                       from './utils/services';
+} from './utils/services';
 import {
   BreadCrumbComponent,
   ElixJumbotronComponent,
   ElixSpinnerComponent,
-}                       from './component';
+  TooltipComponent,
+} from './component';
 import { RouterModule } from '@angular/router';
 
-@NgModule( {
+@NgModule({
   declarations: [
+    ElixJumbotronComponent,
     ElixSpinnerComponent,
     ElixDragDirective,
-    ElixJumbotronComponent,
     BtnPrimaryDirective,
     InputPrimaryDirective,
-    TooltipDirectiveDirective,
     BreadCrumbComponent,
   ],
   imports: [CommonModule, RouterModule],
@@ -30,7 +29,6 @@ import { RouterModule } from '@angular/router';
     ElixJumbotronComponent,
     BtnPrimaryDirective,
     InputPrimaryDirective,
-    TooltipDirectiveDirective,
     BreadCrumbComponent,
   ],
 })

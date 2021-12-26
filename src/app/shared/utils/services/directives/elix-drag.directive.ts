@@ -1,10 +1,13 @@
- import {Directive, ElementRef, HostListener, Input, OnInit, Renderer2} from '@angular/core';
+import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[elixElixDrag]'
+  selector: '[elixElixDrag]',
 })
-export class ElixDragDirective implements OnInit{
-  @Input() defaultColor : string = 'transparent'
+export class ElixDragDirective implements OnInit {
+  @Input() defaultColor: string = 'transparent';
+  @Input() resizableGrabWidth = 8;
+  @Input() resizableMinWidth = 10;
+  dragging = false;
 
   constructor(private _elementRef: ElementRef, private _renderer: Renderer2) {
     const self = this;
@@ -17,21 +20,18 @@ export class ElixDragDirective implements OnInit{
       document.body.style.pointerEvents = 'auto';
     }
 
-
     const newWidth = (wid: number) => {
       const newWidth = Math.max(this.resizableMinWidth, wid);
-      _elementRef.nativeElement.style.width = (newWidth) + "px";
-    }
-
+      _elementRef.nativeElement.style.width = newWidth + 'px';
+    };
 
     const mouseMoveG = (evt: MouseEvent) => {
       if (!this.dragging) {
         return;
       }
-      newWidth(evt.clientX + _elementRef.nativeElement.offsetLeft)
+      newWidth(evt.clientX + _elementRef.nativeElement.offsetLeft);
       evt.stopPropagation();
     };
-
 
     const mouseUpG = (evt: MouseEvent) => {
       if (!this.dragging) {
@@ -50,15 +50,13 @@ export class ElixDragDirective implements OnInit{
       }
     };
 
-
     const mouseMove = (evt: any) => {
       if (this.inDragRegion(evt) || this.dragging) {
-        _elementRef.nativeElement.style.cursor = "col-resize";
+        _elementRef.nativeElement.style.cursor = 'col-resize';
       } else {
-        _elementRef.nativeElement.style.cursor = "default";
+        _elementRef.nativeElement.style.cursor = 'default';
       }
-    }
-
+    };
 
     document.addEventListener('mousemove', mouseMoveG, true);
     document.addEventListener('mouseup', mouseUpG, true);
@@ -66,14 +64,14 @@ export class ElixDragDirective implements OnInit{
     _elementRef.nativeElement.addEventListener('mousemove', mouseMove, true);
   }
 
-  @Input() resizableGrabWidth = 8;
-  @Input() resizableMinWidth = 10;
-
-  dragging = false;
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   inDragRegion(evt: MouseEvent): boolean {
-    return this._elementRef.nativeElement.clientWidth - evt.clientX + this._elementRef.nativeElement.offsetLeft < this.resizableGrabWidth;
+    return (
+      this._elementRef.nativeElement.clientWidth -
+        evt.clientX +
+        this._elementRef.nativeElement.offsetLeft <
+      this.resizableGrabWidth
+    );
   }
 }
