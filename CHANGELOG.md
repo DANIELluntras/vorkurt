@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/NsdHSO/vorkurt/compare/v1.4.0...v1.5.0) (2021-12-29)
+
+
+### Features
+
+* add authentication with data per user ([#59](https://github.com/NsdHSO/vorkurt/issues/59)) ([01e8848](https://github.com/NsdHSO/vorkurt/commit/01e8848a936f7af21ae296fb3b22de6c9bf4d6ee))
+
 ## [1.4.0](https://github.com/NsdHSO/vorkurt/compare/v1.3.2...v1.4.0) (2021-12-14)
 
 
