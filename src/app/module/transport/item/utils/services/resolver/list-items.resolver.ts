@@ -1,26 +1,49 @@
-import { Injectable }                                           from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import { map }                                                  from 'rxjs/operators';
-import { ConnectionService }                                    from '../../../../../../shared/utils/services/firebase/connection.service';
-import { ItemListService }                                      from '../item-list.service';
-import { INewItemTypes }                                        from '../../interfaces';
+import {Injectable, OnDestroy} from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  Resolve,
+  RouterStateSnapshot,
+} from '@angular/router';
+import {map, takeUntil} from 'rxjs/operators';
+import { ConnectionService } from '../../../../../../shared/utils/services/firebase';
+import { ItemListService } from '../item-list.service';
+import { INewItemTypes } from '../../interfaces';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { LocalStorageDataService } from '../../../../../../shared/utils/services';
+import {Subject} from "rxjs";
 
-@Injectable( {
-	providedIn: 'root',
-} )
-export class ListItemsResolver implements Resolve<boolean> {
-	
-	constructor (private _firebase : ConnectionService, private _listItem : ItemListService) {
-	}
-	
-	resolve (route : ActivatedRouteSnapshot, state : RouterStateSnapshot) : any {
-		this._firebase.setUrl( '/item_new' );
-		
-		this._firebase.data.snapshotChanges()
-			.pipe( map( changeData => changeData
-				.map( c => {
-					let a = c.payload.doc.data();
-					return a as INewItemTypes;
-				} ) ) ).subscribe( data => this._listItem.retriveData( data ) );
-	}
+@Injectable({
+  providedIn: 'root',
+})
+export class ListItemsResolver implements Resolve<boolean>,OnDestroy {
+  private _unSubscribe: Subject<any> = new Subject()
+
+  constructor(
+    private _firebase: ConnectionService,
+    private _listItem: ItemListService,
+    private _db: AngularFirestore,
+    private _localStoarage: LocalStorageDataService
+  ) {}
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
+    this._firebase
+      .allDateTwoColection('users', 'item_new')
+      .snapshotChanges()
+      .pipe(
+        takeUntil(this._unSubscribe),
+        map((changeData) =>
+          changeData.map((c) => {
+            let a = c.payload.doc.data();
+            return a as INewItemTypes;
+          })
+        )
+      )
+      .subscribe((data) => this._listItem.retriveData(data));
+  }
+
+  ngOnDestroy(): void {
+    this._unSubscribe.next()
+    this._unSubscribe.complete()
+  }
+
 }

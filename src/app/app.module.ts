@@ -21,13 +21,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {LayoutModule} from '@angular/cdk/layout';
 import {PortalModule} from "@angular/cdk/portal";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AuthComponent,
-    PageNotFoundComponent,
-  ],
+  declarations: [AppComponent, AuthComponent, PageNotFoundComponent, ForgotPasswordComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,9 +43,9 @@ import {PortalModule} from "@angular/cdk/portal";
     MatMenuModule,
     MatButtonModule,
     LayoutModule,
+    MatCheckboxModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

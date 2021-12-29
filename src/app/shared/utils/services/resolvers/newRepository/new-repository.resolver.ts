@@ -19,9 +19,8 @@ export class NewRepositoryResolver implements Resolve<boolean> {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any{
-    this._firebase.setUrl('/template')
 
-    this._firebase.data.snapshotChanges()
+    this._firebase.allDateTwoColection('users','template').snapshotChanges()
       .pipe(map(changeData => changeData
         .map(c => {
           let a = c.payload.doc.data();

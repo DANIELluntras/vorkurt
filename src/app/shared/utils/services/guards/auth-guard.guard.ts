@@ -21,7 +21,7 @@ export class AuthGuardGuard implements CanActivate {
       private _route : Router
   ) {
   }
-  
+
   async canActivate (
       route : ActivatedRouteSnapshot,
       state : RouterStateSnapshot
@@ -29,18 +29,18 @@ export class AuthGuardGuard implements CanActivate {
     const user = await this._firebaseAuth.currentUser;
     let isAuthenticated = user ? true : false;
     const dataFromLocalStorage = this._userService.getUserLoggedIn();
-    
+
     if ( dataFromLocalStorage ) {
       isAuthenticated = true;
     }
-    
+
     if ( !isAuthenticated ) {
       console.warn( 'You must be authenticated in order to access this page.' );
-      
-      await this._route.navigate( [ '/auth/test' ] );
+
+      await this._route.navigate( [ '/auth/l' ] );
     }
     this._sppinerService.setStateBehaviorSpinner( false );
-    
+
     return isAuthenticated;
   }
 }
