@@ -1,6 +1,6 @@
-import { IConfigRouter, ITmsRouter } from "../../shared/utils/interfaces";
+import { IConfigRouter, ITmsRouter } from '../../shared/utils/interfaces';
 
-export const routerArray = Object.freeze( {
+export const routerArray = Object.freeze({
   router: [
     {
       name: 'Pull Request',
@@ -9,13 +9,13 @@ export const routerArray = Object.freeze( {
     {
       name: 'Code',
       path: 'code',
-    } as IConfigRouter, {
+    } as IConfigRouter,
+    {
       name: 'Settings',
       path: 'settings',
     } as IConfigRouter,
   ],
   pageHeader: [
-
     {
       name: 'Issues',
       path: 'issues',
@@ -23,7 +23,8 @@ export const routerArray = Object.freeze( {
     {
       name: 'Marketplace',
       path: 'marketplace',
-    }, {
+    },
+    {
       name: 'Explore',
       path: 'explore',
     },
@@ -48,44 +49,44 @@ export const routerArray = Object.freeze( {
       icon: 'fa_solid:tachometer-alt',
     },
     {
-      name: "Pickup & Collection",
+      name: 'Pickup & Collection',
       path: 'pck-collection',
-      icon: "fa_solid:truck-pickup",
+      icon: 'fa_solid:truck-pickup',
     },
     {
-      name: "Shipping & Transportation",
+      name: 'Shipping & Transportation',
       path: 'shp-transportation',
-      icon: "fa_solid:shipping-fast",
+      icon: 'fa_solid:shipping-fast',
     },
     {
-      name: "Delivery",
+      name: 'Delivery',
       path: 'delivery',
-      icon: "fa_solid:truck-loading",
+      icon: 'fa_solid:truck-loading',
     },
     {
-      name: "Customer Support",
+      name: 'Customer Support',
       path: 'ctm-support',
-      icon: "fa_solid:user-circle",
+      icon: 'fa_solid:user-circle',
     },
     {
-      name: "Billing",
+      name: 'Billing',
       path: 'billing',
-      icon: "fa_solid:money-bill-wave",
+      icon: 'fa_solid:money-bill-wave',
     },
     {
-      name: "3-pl Billing",
+      name: '3-pl Billing',
       path: '3-pl-billing',
-      icon: "fa_solid:money-bill",
+      icon: 'fa_solid:money-bill',
     },
     {
-      name: "Api",
+      name: 'Api',
       path: 'api',
-      icon: "fa_brands:quinscape",
+      icon: 'fa_brands:quinscape',
     },
     {
-      name: "Customer & Vendor",
+      name: 'Customer & Vendor',
       path: 'customer-vendor',
-      icon: "fa_solid:warehouse",
+      icon: 'fa_solid:warehouse',
     },
   ] as ITmsRouter[],
-} );
+});

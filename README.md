@@ -25,12 +25,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 `npm run storybook`
 
 ## Material Shared
+
 For using material table you follow the next step
+
 1. at ngOnInit you need to put the initialize table, it should receive an array of objects like this:
-``` { 
+
+```{
  datasource={
   actions:
-  { 
+  {
     iconClass: "class for icon",
     classCss: " class what you need to maipulate in DOM",
     method: " a function "
@@ -39,8 +42,10 @@ For using material table you follow the next step
   data for table { ES 6 } ...dataTable
 }
 ```
+
 2. In html template you need to declare
-``` 
+
+```
 <elix-table [dataSource] ="data at you initialized in ngOnInit">
   <elix-column-text className="what class css you want for this column"
   [iconClass]="Optional"
@@ -50,10 +55,8 @@ For using material table you follow the next step
 </elix-table>
 ```
 
+# and enjoy at this beautiful library
 
-#  and enjoy at this beautiful library
-      
-      
 ## Angular Json
 
 Add all file from bootstrap such as style
@@ -67,10 +70,12 @@ I added some property new such as
 which we don't need it anymore to initialization evry property
 
 ##### Add The @HostListener and @HostBinding
-  With the HostBinding we can access either one element.
-e.g 
-  @HostBinding('style.backgroundColor') backgroundColor: string = 'color' (must to be initialized this parameter)
-  
+
+With the HostBinding we can access either one element.
+e.g
+@HostBinding('style.backgroundColor') backgroundColor: string = 'color' (must to be initialized this parameter)
+
 ### For run test cypress
-  npm e2e
+
+npm e2e
  

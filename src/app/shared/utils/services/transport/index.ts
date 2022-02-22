@@ -1,1 +1,1 @@
-export * from './items/tooltip-items.service'
+export * from './items/tooltip-items.service';

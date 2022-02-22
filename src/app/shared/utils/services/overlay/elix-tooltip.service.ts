@@ -60,8 +60,10 @@ export class ElixTooltipService {
   }
 
   private _getConfigAtArrow(overlayRef: any) {
-    const tooltipPosition = (overlayRef.getConfig()
-      .positionStrategy as FlexibleConnectedPositionStrategy).positions[0];
+    const tooltipPosition = (
+      overlayRef.getConfig()
+        .positionStrategy as FlexibleConnectedPositionStrategy
+    ).positions[0];
     const arrow: HTMLSpanElement = this._rendered2.createElement('span');
     arrow.classList.add('elix__arrow');
     const tooltipHeight = <number>overlayRef.getConfig().height;

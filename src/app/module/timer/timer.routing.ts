@@ -1,19 +1,17 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {TimmerComponent} from "./timmer/timmer.component";
-
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { TimmerComponent } from './timmer/timmer.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'timer', pathMatch: 'full'},
+  { path: '', redirectTo: 'timer', pathMatch: 'full' },
   {
-    path: '', component: TimmerComponent,
+    path: '',
+    component: TimmerComponent,
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppHeaderRouting {
-}
+export class AppHeaderRouting {}

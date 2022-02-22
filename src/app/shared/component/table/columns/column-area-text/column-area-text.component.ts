@@ -43,10 +43,10 @@ export class ColumnAreaTextComponent extends BaseColumn {
     }
   }
 
-  closeTooltip(){
-    this.value = true
-    this.tooltipOverlay.detach()
-    this.tooltipOverlay.dispose()
+  closeTooltip() {
+    this.value = true;
+    this.tooltipOverlay.detach();
+    this.tooltipOverlay.dispose();
   }
 
   doubleClick(element: IDataSourceMaterialTable<any>, value: boolean) {

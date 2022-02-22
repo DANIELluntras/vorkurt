@@ -8,9 +8,8 @@ describe('RightSideArtifactsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RightSideArtifactsComponent ]
-    })
-    .compileComponents();
+      declarations: [RightSideArtifactsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

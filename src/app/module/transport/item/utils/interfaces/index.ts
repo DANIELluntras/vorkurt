@@ -1,1 +1,1 @@
-export * from './iNew-item.types'
+export * from './iNew-item.types';

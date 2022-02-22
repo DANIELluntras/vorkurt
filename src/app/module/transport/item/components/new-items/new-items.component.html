@@ -1,6 +1,6 @@
 <div class="package__item-content" >
 	<div class="item-branch" >
-		<form [formGroup]="items" >
+		<form #formDirective="ngForm" [formGroup]="items" >
 			<div class="package__item-content-child p-5" >
 				<div class="package__item__content-per" >
 					<div class="flex-row" >
@@ -136,7 +136,9 @@
 					<div >
 						<span >Hazaradous</span >
 						<div elixInputPrimary >
-							<mat-checkbox class="example-margin"
+							<mat-checkbox
+                  formControlName="hazaradous"
+                class="example-margin"
 							              [checked]="false"
 							              [color]="'primary'" >
 
@@ -146,7 +148,9 @@
 					<div class="mt-20" >
 						<span >Mixable</span >
 						<div elixInputPrimary >
-							<mat-checkbox class="example-margin"
+							<mat-checkbox
+                formControlName="mixable"
+                class="example-margin"
 							              [checked]="false"
 							              [color]="'primary'" >
 
@@ -156,7 +160,9 @@
 					<div >
 						<span >Default Packaging</span >
 						<div elixInputPrimary >
-							<mat-checkbox class="example-margin"
+							<mat-checkbox
+                formControlName="defaultPck"
+                class="example-margin"
 							              [checked]="false"
 							              [color]="'primary'" >
 

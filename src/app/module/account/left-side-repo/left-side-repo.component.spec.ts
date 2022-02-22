@@ -8,9 +8,8 @@ describe('LeftSideRepoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LeftSideRepoComponent ]
-    })
-    .compileComponents();
+      declarations: [LeftSideRepoComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

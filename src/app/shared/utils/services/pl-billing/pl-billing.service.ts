@@ -7,9 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PlBillingService {
-  private _walletInformation: BehaviorSubject<IWrapperPlBilling> = new BehaviorSubject<IWrapperPlBilling>(
-    {} as IWrapperPlBilling
-  );
+  private _walletInformation: BehaviorSubject<IWrapperPlBilling> =
+    new BehaviorSubject<IWrapperPlBilling>({} as IWrapperPlBilling);
   walletData$ = this._walletInformation.asObservable();
 
   constructor(private _http: HttpClient) {}

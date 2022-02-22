@@ -26,10 +26,6 @@ export class ListItemsComponent implements OnInit {
         } as IDataSourceMaterialTable<INewItemTypes>;
       });
     });
-    // {
-    // 	actions: this.openAction(),
-    // 		editable: false, ...resspp,
-    // },
   }
 
   openAction(): IActionMaterialColumn[] {
@@ -37,12 +33,14 @@ export class ListItemsComponent implements OnInit {
       {
         iconClass: 'fa_solid:check',
         classCss: 'check',
-        method: (row: any) => (row.editable = !row.editable),
+        method: (row: IDataSourceMaterialTable<INewItemTypes>) => {
+          this._listItem.updateItem('item_new', row.model.uuid, row.model);
+        },
       },
       {
-        iconClass: 'fa_solid:check',
+        iconClass: 'fa_solid:times',
         classCss: 'check',
-        method: (row: any) => row.name,
+        method: (row: any) => this._listItem.delete('item_new', row.model.uuid),
       },
       {
         iconClass: 'fa_solid:check',

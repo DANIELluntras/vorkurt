@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'elix-pull-request',
   templateUrl: './pull-request.component.html',
-  styleUrls: ['./pull-request.component.scss']
+  styleUrls: ['./pull-request.component.scss'],
 })
 export class PullRequestComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

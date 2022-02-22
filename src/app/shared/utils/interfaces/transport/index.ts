@@ -1,1 +1,1 @@
-export * from './ibread-crumb'
+export * from './ibread-crumb';

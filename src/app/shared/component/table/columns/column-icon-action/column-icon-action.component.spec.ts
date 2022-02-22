@@ -8,9 +8,8 @@ describe('ColumnIconActionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ColumnIconActionComponent ]
-    })
-    .compileComponents();
+      declarations: [ColumnIconActionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

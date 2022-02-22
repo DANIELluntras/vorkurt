@@ -1,22 +1,22 @@
-import {Injectable, OnDestroy} from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   Resolve,
   RouterStateSnapshot,
 } from '@angular/router';
-import {map, takeUntil} from 'rxjs/operators';
+import { map, takeUntil } from 'rxjs/operators';
 import { ConnectionService } from '../../../../../../shared/utils/services/firebase';
 import { ItemListService } from '../item-list.service';
 import { INewItemTypes } from '../../interfaces';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { LocalStorageDataService } from '../../../../../../shared/utils/services';
-import {Subject} from "rxjs";
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ListItemsResolver implements Resolve<boolean>,OnDestroy {
-  private _unSubscribe: Subject<any> = new Subject()
+export class ListItemsResolver implements Resolve<boolean>, OnDestroy {
+  private _unSubscribe: Subject<any> = new Subject();
 
   constructor(
     private _firebase: ConnectionService,
@@ -34,6 +34,7 @@ export class ListItemsResolver implements Resolve<boolean>,OnDestroy {
         map((changeData) =>
           changeData.map((c) => {
             let a = c.payload.doc.data();
+            a.uuid = c.payload.doc.id;
             return a as INewItemTypes;
           })
         )
@@ -42,8 +43,7 @@ export class ListItemsResolver implements Resolve<boolean>,OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._unSubscribe.next()
-    this._unSubscribe.complete()
+    this._unSubscribe.next();
+    this._unSubscribe.complete();
   }
-
 }

@@ -1,14 +1,13 @@
-import {OverlayRef} from "@angular/cdk/overlay";
-import {Injectable} from "@angular/core";
+import { OverlayRef } from '@angular/cdk/overlay';
+import { Injectable } from '@angular/core';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OverlayPopUpRef {
-  constructor(private _overlayRef: OverlayRef) {
-  }
+  constructor(private _overlayRef: OverlayRef) {}
 
   close() {
-    this._overlayRef.dispose()
-    this._overlayRef.detach()
+    this._overlayRef.dispose();
+    this._overlayRef.detach();
   }
 }

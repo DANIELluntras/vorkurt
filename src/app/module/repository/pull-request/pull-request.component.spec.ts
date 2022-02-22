@@ -8,9 +8,8 @@ describe('PullRequestComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PullRequestComponent ]
-    })
-    .compileComponents();
+      declarations: [PullRequestComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

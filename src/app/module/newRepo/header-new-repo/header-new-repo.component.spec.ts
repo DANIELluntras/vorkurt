@@ -8,9 +8,8 @@ describe('HeaderNewRepoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderNewRepoComponent ]
-    })
-    .compileComponents();
+      declarations: [HeaderNewRepoComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,13 +1,13 @@
-import {Injectable, NgZone} from '@angular/core';
-import {AngularFireAuth} from '@angular/fire/compat/auth';
-import {UserService} from '../user/user-service';
-import {Router} from '@angular/router';
-import {User} from '../../interfaces/user/user';
-import {IAuthInfoUser} from '../../interfaces/auth/auth-info-user.types';
-import {SpinnerStateService} from '../../../component/spinner/spinner-state.service';
+import { Injectable, NgZone } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { UserService } from '../user/user-service';
+import { Router } from '@angular/router';
+import { User } from '../../interfaces/user/user';
+import { IAuthInfoUser } from '../../interfaces/auth/auth-info-user.types';
+import { SpinnerStateService } from '../../../component/spinner/spinner-state.service';
 import firebase from 'firebase/compat';
-import {throwError} from 'rxjs';
-import {ConnectionService} from '../firebase';
+import { throwError } from 'rxjs';
+import { ConnectionService } from '../firebase';
 import FirebaseError = firebase.FirebaseError;
 
 @Injectable({

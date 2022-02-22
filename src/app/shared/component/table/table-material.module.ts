@@ -9,8 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import {SharedModule} from "../../shared.module";
-import {TooltipComponent} from "../tooltip/tooltip.component";
+import { SharedModule } from '../../shared.module';
+import { TooltipComponent } from '../tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {TooltipComponent} from "../tooltip/tooltip.component";
     ColumnTextComponent,
     ColumnAreaTextComponent,
     ColumnIconActionComponent,
-    TooltipComponent
+    TooltipComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +33,7 @@ import {TooltipComponent} from "../tooltip/tooltip.component";
     ColumnTextComponent,
     ColumnAreaTextComponent,
     ColumnIconActionComponent,
-    TooltipComponent
+    TooltipComponent,
   ],
 })
 export class TableMaterialModule {}

@@ -1,11 +1,9 @@
-
 .elix__height {
   height: 94%;
 }
 
 .wrapper-arrow {
   position: absolute;
-
 }
 
 .arrow {
@@ -21,7 +19,7 @@
   border-bottom-right-radius: 100%;
 
   .arrow__body::after {
-    content: '';
+    content: "";
     position: absolute;
     right: -17px;
     top: -4px;

@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+
+src/assets/*
+.storybook/*
+karma.conf.js
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+cypress/*
+.angular/*
+
+firebase.json

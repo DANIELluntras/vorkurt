@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { SpinnerStateService } from '../shared/component/spinner/spinner-state.service';
 import { getVelocityEmail } from '../config/global/generator';
 import { ConnectionService } from '../shared/utils/services/firebase';
-import firebase from "firebase/compat";
+import firebase from 'firebase/compat';
 import UserCredential = firebase.auth.UserCredential;
 
 @Component({
@@ -43,9 +43,11 @@ export class AuthComponent implements OnInit {
       if (getVelocityEmail(form)) {
         this._sppinerService.setStateBehaviorSpinner(true);
         if (this.logedIn) {
-          this._authService.signInWithEmail(form.value).then((resp: UserCredential | any) => {
-            this._connectionService.createDB({role: 'admin'}, resp);
-          });
+          this._authService
+            .signInWithEmail(form.value)
+            .then((resp: UserCredential | any) => {
+              this._connectionService.createDB({ role: 'admin' }, resp);
+            });
         } else {
           this._authService.signUp(form.value).catch((e) => {
             console.log(e);

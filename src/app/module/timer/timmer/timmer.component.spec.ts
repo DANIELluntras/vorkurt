@@ -8,9 +8,8 @@ describe('TimmerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TimmerComponent ]
-    })
-    .compileComponents();
+      declarations: [TimmerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

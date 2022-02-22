@@ -1,5 +1,5 @@
-import {Meta, moduleMetadata, Story} from '@storybook/angular';
-import {CommonModule} from '@angular/common';
+import { Meta, moduleMetadata, Story } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
 
 import Button from './button.component';
 import Header from './header.component';

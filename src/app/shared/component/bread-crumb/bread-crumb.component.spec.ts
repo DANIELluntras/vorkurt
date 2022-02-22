@@ -8,9 +8,8 @@ describe('BreadCrumbComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BreadCrumbComponent ]
-    })
-    .compileComponents();
+      declarations: [BreadCrumbComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -7,7 +7,7 @@ import { INewRepository, IWrapperRepository } from '../../interfaces';
 import { INewItemTypes } from '../../../../module/transport/item/utils/interfaces/iNew-item.types';
 import firebase from 'firebase/compat';
 import UserCredential = firebase.auth.UserCredential;
-import {LocalStorageDataService} from "../abstract";
+import { LocalStorageDataService } from '../abstract';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +15,12 @@ import {LocalStorageDataService} from "../abstract";
 export class ConnectionService {
   repositoryRef: AngularFirestoreCollection<any>;
   private _dbPath = '/repository';
-  user = JSON.parse(this._localStorage.getResource('user'))
+  user = JSON.parse(this._localStorage.getResource('user'));
 
-  constructor(private _db: AngularFirestore, private _localStorage: LocalStorageDataService) {
+  constructor(
+    private _db: AngularFirestore,
+    private _localStorage: LocalStorageDataService
+  ) {
     this.repositoryRef = _db.collection(this._dbPath);
   }
 
@@ -51,12 +54,11 @@ export class ConnectionService {
   }
 
   createItems(data: any, path?: string) {
-
     return this._db
       .collection('/users')
       .doc(this.user.user.email)
       .collection(path)
-      .add(data)
+      .add(data);
   }
 
   createDB(data: any, documentID: UserCredential) {
@@ -64,8 +66,7 @@ export class ConnectionService {
     this._db.collection(this._dbPath).doc(documentID.user.email).set(data);
   }
 
-  allDateTwoColection(parentCollection: string, secondCollection: string){
-
+  allDateTwoColection(parentCollection: string, secondCollection: string) {
     return this._db
       .collection(parentCollection)
       .doc(this.user.user.email)

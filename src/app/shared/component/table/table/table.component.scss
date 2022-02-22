@@ -1,68 +1,65 @@
 elix-table {
-  transition : all .5s ease-in;
-  color      : var(--primary-color-text);
+  transition: all 0.5s ease-in;
+  color: var(--primary-color-text);
 
   mat-table {
-	color           : transparent;
-	border-collapse : collapse;
-	border-radius   : 0.5em 0.5em 0 0;
-	overflow        : hidden;
+    color: transparent;
+    border-collapse: collapse;
+    border-radius: 0.5em 0.5em 0 0;
+    overflow: hidden;
   }
 
   mat-header-row {
-
-	mat-header-cell {
-	  justify-content : center;
-	  border-spacing  : 2rem;
-	}
+    mat-header-cell {
+      justify-content: center;
+      border-spacing: 2rem;
+    }
   }
 
   mat-row {
-	transition : all ease-in-out .1s;
-	color      : var(--primary-color-text);
-	min-height : 19px;
-	position   : relative;
+    transition: all ease-in-out 0.1s;
+    color: var(--primary-color-text);
+    min-height: 19px;
+    position: relative;
 
-	textarea {
-	  outline : none
-	}
+    textarea {
+      outline: none;
+    }
 
-	&:hover {
-	  background : rgba(1, 1, 222, 0.1);
+    &:hover {
+      background: rgba(1, 1, 222, 0.1);
+    }
 
-	}
+    mat-cell {
+      justify-content: center;
+      position: relative;
+      min-height: 2rem;
 
+      textarea {
+        background: inherit;
+        height: 1.95rem;
 
-	mat-cell {
-	  justify-content : center;
-	  position        : relative;
-	  min-height      : 2rem;
-
-	  textarea {
-		background : inherit;
-		height     : 1.95rem;
-
-		&:focus-visible {
-		  outline : none;
-		  border  : 1px solid var(--primary-color-input)
-		}
-	  }
-	}
+        &:focus-visible {
+          outline: none;
+          border: 1px solid var(--primary-color-input);
+        }
+      }
+    }
   }
 
   mat-header-row {
-	min-height : 1.5rem;;
+    min-height: 1.5rem;
 
-	mat-header-cell {
-	  min-height : inherit;
-	}
+    mat-header-cell {
+      min-height: inherit;
+    }
   }
 
   mat-header-cell {
-	color : var(--primary-color-text) !important;
+    color: var(--primary-color-text) !important;
   }
 
   .header-color {
-	background : #2d333b;
+    background: #2d333b;
   }
 }

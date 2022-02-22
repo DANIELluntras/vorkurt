@@ -47,7 +47,7 @@ export class BottomComponent implements OnInit {
       available: this.available ?? false,
     } as IWrapperRepository;
 
-    console.log('Sami')
+    console.log('Sami');
 
     this._connectionServiceFirebase
       .createItems(newRepo, 'repositoryNew')
