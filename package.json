@@ -21,7 +21,6 @@
     "commit": "cz",
     "lint": "prettier --check .",
     "format": "prettier --write .",
-    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
