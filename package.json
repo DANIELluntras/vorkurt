@@ -21,6 +21,7 @@
         "commit": "cz",
         "lint": "prettier --check .",
         "format": "prettier --write ."
+
     },
     "private": true,
     "dependencies": {

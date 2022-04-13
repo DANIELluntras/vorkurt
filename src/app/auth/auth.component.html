@@ -1,60 +1,59 @@
-<div *ngIf="forgotPass" class="h-full">
-  <div class="h-full" *ngIf="!isSignedIn">
-    <div class="flex">
+<body class="color">
+    <div *ngIf="forgotPass" class="h-full">
+        <div class="h-full" *ngIf="!isSignedIn">
+            <div class="flex">
 
-      <div class="flex flex-1 justify-end ml-20 pt-3">
-        <h1 class="text-white text-9xl ">{{!logedIn ? 'Create' : 'Logged'}}</h1>
-      </div>
-      <div class="flex flex-1 justify-end">
-        <button mat-ripple
-                class="bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3"
-                (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
-      </div>
-    </div>
-    <div class="flex justify-center items-center elix__height">
-      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-        <div class="flex-col mt-3 mb-8">
-          <div elixInputPrimary>
-            <h1 class="text-white text-4xl">Username</h1>
-            <input type="email" ngModel name="email" required>
-          </div>
-          <span *ngIf="feedback.email" class="text-red-600 absolute my-1"> * email is not valid</span>
-        </div>
-        <div class="flex-col mt-3 mb-8">
-          <div elixInputPrimary>
-            <h1 class="text-white text-4xl">Password</h1>
-            <input type="password" minlength="6" ngModel name="password" required>
-          </div>
-          <span *ngIf="feedback.password" class="text-red-600 absolute my-1"> * Password to short</span>
-        </div>
-        <div class="flex justify-end items-center mt-3">
-          <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2"
-                  [disabled]="!authForm"
-                  type="submit">
+                <div class="flex flex-1 justify-end ml-20 pt-3">
+                    <h1 class="text-white text-9xl logged ">{{!logedIn ? 'Create' : 'Logged'}}</h1>
+                </div>
+                <div class="flex flex-1 justify-end">
+                    <button mat-ripple class="bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
+                </div>
+            </div>
+            <div class="flex justify-center items-center elix__height">
+                <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                    <div class="flex-col mt-3 mb-8">
+                        <div elixInputPrimary>
+                            <h1 class="text-white text-4xl">Username</h1>
+                            <input type="email" class="color" ngModel name="email" required>
+                        </div>
+                        <span *ngIf="feedback.email" class="text-red-600 absolute my-1"> * email is not valid</span>
+                    </div>
+                    <div class="flex-col mt-3 mb-8">
+                        <div elixInputPrimary>
+                            <h1 class="text-white text-4xl">Password</h1>
+                            <input class="color" type="password" minlength="6" ngModel name="password" required>
+                        </div>
+                        <span *ngIf="feedback.password" class="text-red-600 absolute my-1"> * Password to short</span>
+                    </div>
+                    <div class="">
+                        <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2" [disabled]="!authForm" type="submit">
             {{!logedIn ? 'Sign Up' : 'Sign In'}}
           </button>
-        </div>
-        <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10" (click)="changeSignIn()">
-          <span> {{logedIn ? 'Create new User' : 'User already created'}}</span>
-        </div>
+                    </div>
+                    <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10" (click)="changeSignIn()">
+                        <span> {{logedIn ? 'Create new User' : 'User already created'}}</span>
+                    </div>
 
-        <div>
-          <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20"
-               [routerLink]="'/forgot_password'">
-            <span>Forgot password</span>
-          </div>
+                    <div>
+                        <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20" [routerLink]="'/forgot_password'">
+                            <span>forgot password</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="arrow">
+                    <div class="arrow__body">
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
-      </form>
-      <div class="arrow">
-        <div class="arrow__body">
-        </div>
-      </div>
+    </div>
+    <div *ngIf="!forgotPass" class="h-full">
 
     </div>
 
 
-  </div>
-</div>
-<div *ngIf="!forgotPass" class="h-full">
-
-</div>
+</body>

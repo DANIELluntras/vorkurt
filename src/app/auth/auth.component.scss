@@ -1,31 +1,102 @@
 .elix__height {
-  height: 94%;
+    height: 94%;
 }
 
 .wrapper-arrow {
-  position: absolute;
+    position: absolute;
 }
 
-.arrow {
-  position: absolute;
-  left: 54%;
-  top: 6%;
-  width: 43%;
-  height: 63%;
-  margin-right: 11px;
-  border-width: 0 5px 5px 0;
-  border-style: dashed;
-  border-color: var(--second-primary-text);
-  border-bottom-right-radius: 100%;
+// de aicia in jos este back ground 
+body {
+    background: linear-gradient(-45deg, #0a235c, #47206a, #1b4b5d, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
 
-  .arrow__body::after {
-    content: "";
-    position: absolute;
-    right: -17px;
-    top: -4px;
-    transform: rotate(180deg);
-    border-width: 20px 15px 0;
-    border-style: solid;
-    border-color: var(--second-primary-text) transparent transparent;
-  }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logged {
+    text-align: center;
+    font-size: 40px;
+    transition: background 1s, border-color 0.2s;
+}
+
+.justify-center {
+    height: 800px;
+    width: 800px;
+    padding: 3rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 02);
+    border-radius: 5px;
+    background-color: rgb(126, 187, 241);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.cursor-pointer {
+    color: rgb(240, 232, 232);
+    font-family: 'arial';
+    border: 2px solid #151212;
+    background-color: #0a235c;
+    font-size: 33px;
+    padding: 6px;
+}
+
+// background-color: #fff;
+.cursor-pointer:hover {
+    color: rgb(9, 2, 2);
+    background-color: #fff;
+    font-size: 1em;
+    transition: all 2s
+}
+
+.color {
+    color: #fff;
+    padding: 1rem;
+    border: 2px solid #dddddd;
+}
+
+.color:hover {
+    color: rgb(0, 255, 42);
+    padding: 1.2rem;
+}
+
+.text-4xl {
+    color: rgb(15, 2, 2);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.rounded-md {
+    background-color: rgb(20, 7, 7);
+    height: 40px;
+    width: 200px;
+}
+
+.rounded-md:hover {
+    background-color: rgb(112, 111, 119);
+    height: 40px;
+    width: 500px;
+    transition: all 2s;
+    border-radius: 13px;
+}
+
+.color:hover {
+    border-radius: 13px;
+    color: rgb(227, 226, 240);
+    transition: all 3s linear
 }
