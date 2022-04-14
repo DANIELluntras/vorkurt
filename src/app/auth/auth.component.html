@@ -4,21 +4,29 @@
             <div class="flex">
 
                 <div class="flex flex-1 justify-end ml-20 pt-3">
-                    <h1 class="text-white text-9xl logged ">{{!logedIn ? 'Create' : 'Logged'}}</h1>
+                    <h1 class="text-white text-9xl logged ">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
                 </div>
                 <div class="flex flex-1 justify-end">
                     <button mat-ripple class="bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
                 </div>
             </div>
+            <div class="paragaraf si h1">
+
+                <p class="paragaraf">This is very careful, before all the aspects you could use this page<br> is for all your needs, you have to be careful first</p>
+
+            </div>
             <div class="flex justify-center items-center elix__height">
+
                 <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
                     <div class="flex-col mt-3 mb-8">
                         <div elixInputPrimary>
+                            <h1 class="loggin">LOGGIN</h1>
                             <h1 class="text-white text-4xl">Username</h1>
                             <input type="email" class="color" ngModel name="email" required>
                         </div>
                         <span *ngIf="feedback.email" class="text-red-600 absolute my-1"> * email is not valid</span>
                     </div>
+
                     <div class="flex-col mt-3 mb-8">
                         <div elixInputPrimary>
                             <h1 class="text-white text-4xl">Password</h1>
@@ -54,6 +62,13 @@
     <div *ngIf="!forgotPass" class="h-full">
 
     </div>
+
+
+
+
+
+
+
 
 
 </body>

@@ -33,12 +33,13 @@ body {
 }
 
 .justify-center {
-    height: 800px;
-    width: 800px;
+    height: 700px;
+    width: 700px;
     padding: 3rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 02);
-    border-radius: 5px;
-    background-color: rgb(126, 187, 241);
+    box-shadow: 0 0 90px rgba(0, 0, 0, 02);
+    border-radius: 8px;
+    background: linear-gradient(-45deg, #cbd1df, #ac97bf, #6a9cae, #bdd4cf);
+    animation: gradient 15s ease infinite;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -46,6 +47,7 @@ body {
     outline: none;
     cursor: pointer;
     font-size: 2rem;
+    margin-left: 550px;
 }
 
 .cursor-pointer {
@@ -99,4 +101,30 @@ body {
     border-radius: 13px;
     color: rgb(227, 226, 240);
     transition: all 3s linear
+}
+
+.paragaraf {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    margin: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.heter {
+    font-size: 40px;
+}
+
+.this {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    background: linear-gradient(-45deg, #0a235c, #47206a, #1b4b5d, #23d5ab);
+}
+
+.loggin {
+    text-align: center;
+    padding: 60px;
+    font-size: 40px;
+    background: linear-gradient(-45deg, #0a235c, #47206a, #1b4b5d, #23d5ab);
 }
