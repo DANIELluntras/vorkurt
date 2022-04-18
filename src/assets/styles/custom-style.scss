@@ -19,7 +19,7 @@
     height: inherit
 }
 
-.vorkurt__background-primary {
+vorkurt__primary-btn .vorkurt__background-primary {
     @include background
 }
 
@@ -98,15 +98,13 @@
 }
 
 .vorkurt__primary-btn {
-    border: 1px solid var(--second-primary-text);
     border-radius: 30%;
     padding: 0 .3rem;
     position: relative;
     color: #258EA6;
     &:hover {
-        background: rgba(106, 105, 173, 0.2);
-        transform: scale(1.3);
-        box-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.6)
+        color: rgb(23, 8, 8);
+        font-size: 20px;
     }
     &:active {
         transition: all 2s
