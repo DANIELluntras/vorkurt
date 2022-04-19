@@ -7,7 +7,7 @@
 }
 
 .color {
-    background-image: url("https://img.freepik.com/free-vector/light-wave-border-background_53876-78863.jpg?w=1380&t=st=1650102631~exp=1650103231~hmac=676269eb0e94e5b32f3f4f9559e1b658e5eb204eb6e91ad38f5035c7c8164528");
+    background: linear-gradient(-45deg, #06215f, #242425);
     background-size: 100% 100%;
 }
 
@@ -29,13 +29,13 @@
     transition: background 1s, border-color 0.2s;
 }
 
-.justify-center {
+.std {
     height: 700px;
     width: 700px;
     padding: 3rem;
     box-shadow: 0 0 90px rgba(0, 0, 0, 02);
     border-radius: 8px;
-    background: linear-gradient(-45deg, #cbd1df, #ac97bf, #6a9cae, #bdd4cf);
+    background: linear-gradient(-45deg, #676869, #1e4855, );
     justify-content: center;
     align-items: center;
     display: flex;
