@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'auth/l',
     component: AuthComponent,
   },
-  { path: '', redirectTo: 'auth/l', pathMatch: 'full' },
+  { path: '', redirectTo: 'tms', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
