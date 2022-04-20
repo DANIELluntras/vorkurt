@@ -1,3 +1,11 @@
+## [1.6.0](https://github.com/NsdHSO/vorkurt/compare/v1.5.0...v1.6.0) (2022-04-20)
+
+
+### Features
+
+* crud table all data per user ([#60](https://github.com/NsdHSO/vorkurt/issues/60)) ([25b086e](https://github.com/NsdHSO/vorkurt/commit/25b086ed8cef58585cbd2bec1bed0857b11f1b00))
+* remove comma ([#63](https://github.com/NsdHSO/vorkurt/issues/63)) ([7a7b831](https://github.com/NsdHSO/vorkurt/commit/7a7b8319d2fc4ab96a6e91b46d844f1ff651494e))
+
 ## [1.5.0](https://github.com/NsdHSO/vorkurt/compare/v1.4.0...v1.5.0) (2021-12-29)
 
 
