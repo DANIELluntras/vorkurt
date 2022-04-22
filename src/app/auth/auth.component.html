@@ -4,7 +4,7 @@
             <div class="flex">
 
                 <div class="flex flex-1 justify-end ml-20 pt-3">
-                    <h1 class="text-white text-9xl logged ">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
+                    <h1 class="text-white text-9xl color-font-transition font-mono">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
                 </div>
                 <div class="flex flex-1 justify-end">
                     <button mat-ripple class="bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
@@ -15,7 +15,7 @@
                 <p class="paragaraf">This is very careful, before all the aspects you could use this page is for all your needs, you have to be careful first</p>
 
             </div>
-            <div class="  std BEM flex justify-center items-center elix__height">
+            <div class="std BEM flex justify-center items-center elix__height">
 
                 <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
                     <div class="flex-col mt-3 mb-8">
@@ -35,16 +35,17 @@
                         <span *ngIf="feedback.password" class="text-red-600 absolute my-1"> * Password to short</span>
                     </div>
                     <div class="">
-                        <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2" [disabled]="!authForm" type="submit">
+                        <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2 " [disabled]="!authForm" type="submit">
             {{!logedIn ? 'Sign Up' : 'Sign In'}}
           </button>
                     </div>
-                    <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10" (click)="changeSignIn()">
+                    <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10 background__color__size-hover__padding" (click)="changeSignIn()">
                         <span> {{logedIn ? 'Create new User' : 'User already created'}}</span>
                     </div>
 
+
                     <div>
-                        <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20" [routerLink]="'/forgot_password'">
+                        <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20   background__color__size-hover__padding" [routerLink]="'/forgot_password'">
                             <span>forgot password</span>
                         </div>
                     </div>

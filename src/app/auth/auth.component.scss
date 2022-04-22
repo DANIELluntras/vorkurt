@@ -23,9 +23,9 @@
     }
 }
 
-.logged {
+.color-font-transition {
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     transition: background 1s, border-color 0.2s;
 }
 
@@ -44,29 +44,33 @@
     cursor: pointer;
     font-size: 2rem;
     margin-left: 550px;
+    transition: all 5s;
+    &:hover {
+        box-shadow: 0 0 110px rgb(63, 141, 187);
+        transform-origin: 6px;
+        opacity: 0.8;
+    }
 }
 
-.cursor-pointer {
+.background__color__size-hover__padding {
     color: rgb(240, 232, 232);
     font-family: 'arial';
     font-size: 33px;
     padding: 6px;
-}
-
-// background-color: #fff;
-.cursor-pointer:hover {
-    color: rgb(9, 2, 2);
-    background-color: #fff;
+    // background-color: #fff;
+    &:hover {
+        color: rgb(9, 2, 2);
+        background-color: #fff;
+    }
 }
 
 .color {
     color: #fff;
     padding: 1rem;
     border: 2px solid #dddddd;
-}
-
-.color:hover {
-    color: rgb(0, 255, 42);
+    &:hover {
+        color: rgb(0, 255, 42);
+    }
 }
 
 .text-4xl {
@@ -80,12 +84,11 @@
     height: 40px;
     width: 300px;
     font-size: 35px;
-}
-
-.rounded-md:hover {
-    font-size: 35px;
-    color: rgb(3, 0, 0);
-    background-color: rgb(244, 243, 248);
+    &:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }
 }
 
 .color:hover {
@@ -104,13 +107,6 @@
 
 .heter {
     font-size: 40px;
-}
-
-.this {
-    text-align: center;
-    padding: 40px;
-    font-size: 40px;
-    background: linear-gradient(-45deg, #0a235c, #47206a, #1b4b5d, #23d5ab);
 }
 
 .loggin {
