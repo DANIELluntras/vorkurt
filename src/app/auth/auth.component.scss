@@ -6,7 +6,7 @@
     position: absolute;
 }
 
-.color {
+body {
     background: linear-gradient(-45deg, #06215f, #242425);
     background-size: 100% 100%;
 }
@@ -29,7 +29,7 @@
     transition: background 1s, border-color 0.2s;
 }
 
-.std {
+.backgroundColor__night {
     height: 700px;
     width: 700px;
     padding: 3rem;
