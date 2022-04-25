@@ -2,15 +2,6 @@
     height: 94%;
 }
 
-.wrapper-arrow {
-    position: absolute;
-}
-
-body {
-    background: linear-gradient(-45deg, #06215f, #242425);
-    background-size: 100% 100%;
-}
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -23,13 +14,13 @@ body {
     }
 }
 
-.color-font-transition {
+.vorkurt__titlu_page {
     text-align: center;
     font-size: 50px;
     transition: background 1s, border-color 0.2s;
 }
 
-.backgroundColor__night {
+.loggin__page {
     height: 700px;
     width: 700px;
     padding: 3rem;
@@ -52,7 +43,7 @@ body {
     }
 }
 
-.background__color__size-hover__padding {
+.loggin--link__create_and--forget__password {
     color: rgb(240, 232, 232);
     font-family: 'arial';
     font-size: 33px;
@@ -64,7 +55,7 @@ body {
     }
 }
 
-.color--primary--nice {
+.loggin--email__username--and__password {
     color: #fff;
     padding: 1rem;
     border: 2px solid #dddddd;
@@ -75,12 +66,14 @@ body {
     }
 }
 
-.text-4xl {
-    color: rgb(15, 2, 2);
+.loggin__name--space {
+    color: rgb(146, 137, 137);
     font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    padding: 6px;
 }
 
-.rounded-md {
+.loggin--botton--under--password {
     color: rgb(254, 251, 251);
     background-color: rgb(0, 0, 0);
     height: 40px;
@@ -93,7 +86,7 @@ body {
     }
 }
 
-.paragaraf--backgroundColor__whith--font--size__family {
+.paragaraf--uptitle {
     color: #dfdbdb;
     text-align: center;
     font-size: 25px;
@@ -102,9 +95,9 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.loggin {
+.loggin__name {
     text-align: center;
-    padding: 90px;
+    padding: 120px;
     font-size: 40px;
     margin: 100px;
 }
