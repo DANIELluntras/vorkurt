@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TransportFrameComponent } from './transport-frame.component';
-import { routerArray } from '../../config/global/config-router';
-import { PlBillingResolver } from '../../shared/utils/services/resolvers/pl-billing/pl-billing.resolver';
-import { ListItemsResolver } from './item/utils/services';
+import { routerArray } from 'src/app/config/global/config-router';
+import { PlBillingResolver } from 'src/app/shared/utils/services/resolvers/pl-billing/pl-billing.resolver';
+import { ListItemsResolver } from 'src/app/module/transport/item/utils/services';
+import { LoadDriversResolver } from 'src/app/module/transport/shared/services/resolver/load-drivers.resolver';
 
 const routes: Routes = [
   {
@@ -96,6 +97,17 @@ const routes: Routes = [
           ),
         data: {
           breadCrumb: 'Customer Vendor',
+        },
+      },
+      {
+        path: 'driver',
+        loadChildren: () =>
+          import('./driver/driver.module').then((m) => m.DriverModule),
+        data: {
+          breadCrumb: 'Driver',
+        },
+        resolve: {
+          drivers: LoadDriversResolver,
         },
       },
     ],
