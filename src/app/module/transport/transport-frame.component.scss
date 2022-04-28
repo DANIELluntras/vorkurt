@@ -1,106 +1,110 @@
 @mixin z-index {
-    z-index: 100;
+  z-index: 100;
 }
 
 .transport__frame-content {
-    color: var(--primary-color-text);
-    width: 95vw;
-    padding: 0.6rem 0 0.4rem 3rem;
+  color: var(--primary-color-text);
+  width: 95vw;
+  padding: 0.6rem 0 0.4rem 3rem;
+  position: relative;
+  .transport__frame-img {
     position: relative;
-    .transport__frame-img {
-        position: relative;
-        &:before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient( to right bottom, rgba(243, 243, 246, 0.4), rgba(75, 75, 149, 0.39));
-        }
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(243, 243, 246, 0.4),
+        rgba(75, 75, 149, 0.39)
+      );
     }
+  }
 }
 
 .transport__menu {
-    width: 3rem;
-    transition: all 1s ease-in;
-    color: var(--primary-color-text);
-    @include z-index;
-    height: 100.5vh;
-    .transport__menu-bar {
-        height: 200vh;
-    }
+  width: 3rem;
+  transition: all 1s ease-in;
+  color: var(--primary-color-text);
+  @include z-index;
+  height: 100.5vh;
+  .transport__menu-bar {
+    height: 200vh;
+  }
+  div {
+    background: var(--primary-color-background);
     div {
-        background: var(--primary-color-background);
+      div {
         div {
-            div {
-                div {
-                    align-items: center;
-                    &:hover {
-                        &::after {
-                            position: absolute;
-                            content: "";
-                            height: 100%;
-                            width: 100%;
-                            background: var(--primary-color-text);
-                            z-index: 100;
-                            opacity: 0.4;
-                        }
-                    }
-                    .transport__text {
-                        transition: all 0.2s;
-                        align-items: center;
-                        min-width: 12rem;
-                        @include z-index;
-                    }
-                }
+          align-items: center;
+          &:hover {
+            &::after {
+              position: absolute;
+              content: "";
+              height: 100%;
+              width: 100%;
+              background: var(--primary-color-text);
+              z-index: 100;
+              opacity: 0.4;
             }
+          }
+          .transport__text {
+            transition: all 0.2s;
+            align-items: center;
+            min-width: 12rem;
+            @include z-index;
+          }
         }
+      }
     }
-    .active {
-        color: var(--second-primary-text);
-        mat-icon {
-            margin-left: 0.5rem;
-            transform: scale(1.5);
-        }
+  }
+  .active {
+    color: var(--second-primary-text);
+    mat-icon {
+      margin-left: 0.5rem;
+      transform: scale(1.5);
     }
-    &:hover {
+  }
+  &:hover {
+    div {
+      div {
         div {
-            div {
-                div {
-                    div {
-                        align-items: center;
-                        .transport__text {
-                            align-items: center;
-                            min-width: 13rem;
-                            display: flex;
-                            animation: test 0.3s ease-in-out;
-                            transition: all 0.2s ease-in;
-                        }
-                    }
-                }
+          div {
+            align-items: center;
+            .transport__text {
+              align-items: center;
+              min-width: 13rem;
+              display: flex;
+              animation: test 0.3s ease-in-out;
+              transition: all 0.2s ease-in;
             }
+          }
         }
-        width: 15rem;
-        @include z-index;
-        box-shadow: 1rem 1rem 24px rgb(3 2 1 / 30%);
+      }
     }
-    .transport__menu-child {
-        mat-icon {
-            min-width: 2rem;
-        }
-        height: 3rem;
-        z-index: 100;
+    width: 15rem;
+    @include z-index;
+    box-shadow: 1rem 1rem 24px rgb(3 2 1 / 30%);
+  }
+  .transport__menu-child {
+    mat-icon {
+      min-width: 2rem;
     }
+    height: 3rem;
+    z-index: 100;
+  }
 }
 
 @keyframes test {
-    from {
-        min-width: 0;
-    }
-    to {
-        min-width: 13rem;
-        display: flex;
-        opacity: 1;
-    }
+  from {
+    min-width: 0;
+  }
+  to {
+    min-width: 13rem;
+    display: flex;
+    opacity: 1;
+  }
 }
