@@ -14,19 +14,26 @@
     }
 }
 
+.page__sign-in {
+    background-image: url("https://sustainabletravel.org/wp-content/uploads/Row-Background-Tall-Mountain-Silhouette-1-Low-scaled.jpg");
+}
+
 .vorkurt__titlu_page {
     text-align: center;
+    color: black;
+    letter-spacing: 7px;
     font-size: 50px;
     transition: background 1s, border-color 0.2s;
 }
 
 .loggin__page {
-    height: 700px;
-    width: 700px;
+    opacity: 3;
+    height: 800px;
+    width: 500px;
     padding: 3rem;
     box-shadow: 0 0 90px rgba(0, 0, 0, 02);
-    border-radius: 8px;
-    background: linear-gradient(-45deg, #676869, #1e4855, );
+    border-radius: 40px;
+    background: linear-gradient(-45deg, #808B96, #B3B6B7, );
     justify-content: center;
     align-items: center;
     display: flex;
@@ -34,12 +41,13 @@
     outline: none;
     cursor: pointer;
     font-size: 2rem;
-    margin-left: 550px;
+    margin-left: 650px;
     transition: all 5s;
     &:hover {
         box-shadow: 0 0 110px rgb(63, 141, 187);
-        transform-origin: 6px;
+        transform-origin: 9px;
         opacity: 0.8;
+        border-radius: 10px;
     }
 }
 
@@ -57,6 +65,7 @@
 
 .loggin--email__username--and__password {
     color: #fff;
+    background-color: #fff;
     padding: 1rem;
     border: 2px solid #dddddd;
     &:hover {
@@ -67,7 +76,7 @@
 }
 
 .loggin__name--space {
-    color: rgb(146, 137, 137);
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     padding: 6px;
@@ -87,7 +96,7 @@
 }
 
 .paragaraf--uptitle {
-    color: #dfdbdb;
+    color: black;
     text-align: center;
     font-size: 25px;
     padding: 15px;
@@ -100,4 +109,5 @@
     padding: 120px;
     font-size: 40px;
     margin: 100px;
+    color: black;
 }
