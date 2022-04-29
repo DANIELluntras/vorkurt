@@ -1,45 +1,47 @@
-<div *ngIf="forgotPass" class="h-full ">
-    <div class="h-full" *ngIf="!isSignedIn">
-        <div class="flex background-color__padiing__fontsize__family ">
-            <div class="flex flex-1 justify-end ml-20 pt-3">
-                <h1 class="text-white text-9xl vorkurt__titlu_page font-mono">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
+<div *ngIf="forgotPass" class="h-full auth">
+    <div class="h-full auth__background" *ngIf="!isSignedIn">
+        <div class="flex auth__background-header background-color__padiing__fontsize__family ">
+            <div class="auth__background-header__up flex flex-1 justify-end ml-20 pt-3">
+                <h1 class="auth__background-header__up-title text-white text-9xl vorkurt__titlu_page font-mono">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
             </div>
 
 
             <!-- this is the bottom button -->
-            <div class="flex flex-1 justify-end">
-                <button mat-ripple class="bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3  loggin--botton--under--password" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
+            <div class=" flex flex-1 justify-end auth__background-header__buttom">
+                <button mat-ripple class="auth__background-header__buttom--botton bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3  loggin--botton--under--password" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
             </div>
         </div>
         <!-- this is the paragraph -->
-        <p class="paragaraf--uptitle">This is very careful, before all the aspects you could use this page is for all your needs, you have to be careful first</p>
-        <div class="loggin__page flex justify-center items-center elix__height">
-            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-                <div class="flex-col mt-3 mb-8">
-                    <div elixInputPrimary>
-                        <h1 class="loggin__name">Sign In</h1>
-                        <h1 class="text-white text-4xl loggin__name--space ">Username</h1>
-                        <input type="email" class="loggin--email__username--and__password" ngModel name="email" required>
+        <p class="paragaraf--uptitle  auth__background-paragraf">This is very careful, before all the aspects you could use this page is for all your needs, you have to be careful first</p>
+        <div class=" auth__background-container  loggin__page flex justify-center items-center elix__height">
+            <form class="auth__background-container-form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                <div class="flex-col mt-3 mb-8  auth__background-container-form__header">
+                    <div elixInputPrimary class="auth__background-container-form__header--input_primary">
+                        <h1 class="loggin__name  auth__background-container-form__header--input_primary__sign__in">Sign In</h1>
+                        <h1 class="text-white text-4xl loggin__name--space  auth__background-container-form__header--input_primary-username">Username</h1>
+                        <input type="email" class="loggin--email__username--and__password
+                          auth__background-container-form__header--input_primary-email" ngModel name="email" required>
                     </div>
-                    <span *ngIf="feedback.email" class="text-red-600 absolute my-1"> * email is not valid</span>
+                    <span *ngIf="feedback.email" class="text-red-600 absolute my-1 auth__background-container-form__header__feed-back  "> * email is not valid</span>
                 </div>
-                <div class="flex-col mt-3 mb-8">
-                    <div elixInputPrimary>
-                        <h1 class="text-white text-4xl loggin__name--space">Password</h1>
-                        <input class="loggin--email__username--and__password" type="password" minlength="6" ngModel name="password" required>
+                <div class="flex-col mt-3 mb-8  auth__background-container-form__buttom">
+                    <div elixInputPrimary class="auth__background-container-form__buttom__input_primary">
+                        <h1 class="text-white text-4xl loggin__name--space auth__background-container-form__buttom__input__primary-pasword ">Password</h1>
+                        <input class="loggin--email__username--and__password  auth__background-container-form__buttom__input_primary-input" type="password" minlength="6" ngModel name="password" required>
                     </div>
-                    <span *ngIf="feedback.password" class="text-red-600 absolute my-1"> * Password to short</span>
+                    <span *ngIf="feedback.password" class="text-red-600 absolute my-1  auth__background-container-form__buttom-feedback__password"> * Password to short</span>
                 </div>
-                <div class="">
-                    <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2  loggin--botton--under--password" [disabled]="!authForm" type="submit">
+
+                <div class="auth__background-container-form-logedIn">
+                    <button class="bg-blue-400 hover:border-2 hover:bg-blue-700 rounded-md text-white pr-3 pl-3 pb-2 pt-2  loggin--botton--under--password auth__background-container-form-logedIn__button" [disabled]="!authForm" type="submit">
             {{!logedIn ? 'Sign Up' : 'Sign In'}}
           </button>
                 </div>
-                <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10 loggin--link__create_and--forget__password" (click)="changeSignIn()">
-                    <span> {{logedIn ? 'Create new User' : 'User already created'}}</span>
+                <div class="auth__background-container-form--create-new-user  wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-10 loggin--link__create_and--forget__password" (click)="changeSignIn()">
+                    <span class="auth__background-container-form--create-new-user_user already created"> {{logedIn ? 'Create new User' : 'User already created'}}</span>
                 </div>
-                <div>
-                    <div class="wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20   loggin--link__create_and--forget__password" [routerLink]="'/forgot_password'">
+                <div class="auth__background-container-form__forget-password">
+                    <div class="auth__background-container-form__forget-password__password  wrapper-arrow -ml-2 text-blue-400 hover:underline cursor-pointer mt-20   loggin--link__create_and--forget__password" [routerLink]="'/forgot_password'">
                         <span>forgot password</span>
                     </div>
                 </div>
@@ -54,5 +56,7 @@
 </div>
 
 <div>
-    <p>Daniel Luntras design this page ;)</p>
+    <p>Daniel Luntras<br> Samuel Nechiforel
+
+    </p>
 </div>
