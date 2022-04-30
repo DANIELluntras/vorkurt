@@ -5,21 +5,48 @@ import {
   ContentChildren,
   Input,
   QueryList,
+  TemplateRef,
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
 import { MatColumnDef, MatTable } from '@angular/material/table';
 import { BaseColumn } from '../base-column';
+import { IDataSourceMaterialTable } from '../../../utils/interfaces/shared/iData-source-material-table';
+import { BehaviorSubject } from 'rxjs';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'elix-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ),
+    ]),
+  ],
   encapsulation: ViewEncapsulation.None,
 })
 export class TableComponent<T> implements AfterViewInit {
   @Input() dataSource: Array<T>;
-  columnsToDispaly: string[];
+  @Input()
+  extensible: boolean = false;
+  @Input()
+  extandble$: BehaviorSubject<IDataSourceMaterialTable<T> | null>;
+  @Input()
+  newElementExtandble: TemplateRef<any>;
+
+  columnsToDispaly: string[] = [];
   // this is where the magic happens:
   @ViewChild(MatTable, { static: true }) table: MatTable<T>;
   @ContentChildren(BaseColumn)

@@ -62,4 +62,11 @@ elix-table {
   .header-color {
     background: #2d333b;
   }
+  .example-detail-row {
+    min-height: 0 !important;
+    mat-cell {
+      min-height: inherit;
+      justify-content: flex-end;
+    }
+  }
 }

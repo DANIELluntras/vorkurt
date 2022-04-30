@@ -1,0 +1,26 @@
+<div >
+  <elix-table [dataSource]="dataSourceDrivers" [extensible]="true" [newElementExtandble]="detail" [extandble$]="selectedDriver$">
+    <elix-column-text className="fullName" [iconClass]="'elixir'" field="fullName" name="FullName"
+    ></elix-column-text >
+    <elix-column-text className="driverLicense" [iconClass]="'elixir'" field="driverLicense" name="Driver License"
+    ></elix-column-text >
+    <elix-column-text className="address" [iconClass]="'elixir'" field="address"
+                      name="Address" ></elix-column-text >
+    <elix-column-icon-action className="action" name="Action"
+                             field="action" iconClass="fa_solid:sort-down" ></elix-column-icon-action >
+  </elix-table >
+</div >
+
+<ng-template let-element #detail >
+  <ng-container *ngIf="element.model.index == selectedIndexDriver">
+  <elix-table [dataSource]="element.model.carsInit" *ngIf="element.model.carsInit.length">
+    <elix-column-text className="reservoir__ful" [iconClass]="'elixir'" field="reservoirFuel" name="Reservoir Fuel"
+    ></elix-column-text >
+    <elix-column-text className="kg-per-weight" [iconClass]="'elixir'" field="kgPerWeight" name="Kg Per Weight"
+    ></elix-column-text >
+    <elix-column-icon-action className="action" name="Action"
+                             field="action" iconClass="fa_solid:sort-down" ></elix-column-icon-action >
+  </elix-table >
+  </ng-container>
+</ng-template>
+

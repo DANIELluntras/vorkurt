@@ -41,12 +41,17 @@ export const routerArray = Object.freeze({
     {
       name: 'Items',
       path: 'items',
-      icon: 'fa_solid:pencil-alt',
+      icon: 'fa_solid:pencil',
     },
     {
       name: 'Dashboard',
       path: 'dashboard',
-      icon: 'fa_solid:tachometer-alt',
+      icon: 'fa_solid:gauge',
+    },
+    {
+      name: 'Drivers',
+      path: 'driver',
+      icon: 'fa_solid:recycle',
     },
     {
       name: 'Pickup & Collection',
@@ -56,17 +61,17 @@ export const routerArray = Object.freeze({
     {
       name: 'Shipping & Transportation',
       path: 'shp-transportation',
-      icon: 'fa_solid:shipping-fast',
+      icon: 'fa_solid:truck-fast',
     },
     {
       name: 'Delivery',
       path: 'delivery',
-      icon: 'fa_solid:truck-loading',
+      icon: 'fa_solid:truck',
     },
     {
       name: 'Customer Support',
       path: 'ctm-support',
-      icon: 'fa_solid:user-circle',
+      icon: 'fa_solid:user',
     },
     {
       name: 'Billing',
