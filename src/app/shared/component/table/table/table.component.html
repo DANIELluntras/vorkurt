@@ -1,5 +1,18 @@
-<mat-table mat-table [dataSource]="dataSource" >
-	<ng-content ></ng-content >
-	<mat-header-row class="header-color" mat-header-row *matHeaderRowDef="columnsToDispaly" ></mat-header-row >
-	<mat-row mat-row *matRowDef="let row; columns: columnsToDispaly" ></mat-row >
-</mat-table >
+<mat-table mat-table [dataSource]="dataSource" multiTemplateDataRows="true">
+  <ng-content></ng-content>
+  <mat-header-row class="header-color" mat-header-row *matHeaderRowDef="columnsToDispaly"></mat-header-row>
+  <mat-row mat-row *matRowDef="let row; columns: columnsToDispaly"></mat-row>
+
+  <!--  Extanble-->
+  <ng-container *ngIf="extensible">
+    <ng-container matColumnDef="extensibleData">
+      <mat-cell *matCellDef="let element" [attr.colspan]="columnsToDispaly.length" class="overflow-hidden">
+        <div [@detailExpand]="element=== (extandble$ | async) ?'expanded': 'collapsed'" class="elix__table">
+          <ng-container *ngTemplateOutlet="newElementExtandble; context{$implicit: element}">
+          </ng-container>
+        </div>
+      </mat-cell>
+    </ng-container>
+    <mat-row *matRowDef="let row;columns: ['extensibleData']" class="example-detail-row"></mat-row>
+  </ng-container>
+</mat-table>
