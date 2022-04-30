@@ -1,3 +1,18 @@
+## [1.6.0](https://github.com/Vorkurt/zilpa/compare/v1.5.0...v1.6.0) (2022-04-30)
+
+
+### Features
+
+* added spinner ([#79](https://github.com/Vorkurt/zilpa/issues/79)) ([f13bc6f](https://github.com/Vorkurt/zilpa/commit/f13bc6fad2fa65789068634e03c476c135747dc5))
+* added the icon and driver module [VRDRV-01] ([#77](https://github.com/Vorkurt/zilpa/issues/77)) ([2035739](https://github.com/Vorkurt/zilpa/commit/2035739beeede30262279e2b262f8fd40120a991))
+* crud table all data per user ([#60](https://github.com/Vorkurt/zilpa/issues/60)) ([25b086e](https://github.com/Vorkurt/zilpa/commit/25b086ed8cef58585cbd2bec1bed0857b11f1b00))
+* remove comma ([#63](https://github.com/Vorkurt/zilpa/issues/63)) ([7a7b831](https://github.com/Vorkurt/zilpa/commit/7a7b8319d2fc4ab96a6e91b46d844f1ff651494e))
+
+
+### Bug Fixes
+
+* added the correct history ([#67](https://github.com/Vorkurt/zilpa/issues/67)) ([e6ba653](https://github.com/Vorkurt/zilpa/commit/e6ba653d8c47996824c0796c90735eaecae5ff38))
+
 ## [1.6.0](https://github.com/NsdHSO/vorkurt/compare/v1.5.0...v1.6.0) (2022-04-26)
 
 
