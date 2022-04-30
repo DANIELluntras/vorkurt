@@ -1,0 +1,11 @@
+elix-list-driver {
+  .driver__ {
+    &unexisting {
+      color: var(--primary-color-text);
+    }
+
+    &existing {
+      color: var(--primary-color-input);
+    }
+  }
+}

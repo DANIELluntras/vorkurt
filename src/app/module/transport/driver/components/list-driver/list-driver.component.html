@@ -1,4 +1,4 @@
-<div *ngIf="dataSourceDrivers.length >0; else spinner" >
+<div >
   <elix-table [dataSource]="dataSourceDrivers" [extensible]="true" [newElementExtandble]="detail" [extandble$]="selectedDriver$">
     <elix-column-text className="fullName" [iconClass]="'elixir'" field="fullName" name="FullName"
     ></elix-column-text >
@@ -10,9 +10,6 @@
                              field="action" iconClass="fa_solid:sort-down" ></elix-column-icon-action >
   </elix-table >
 </div >
-<ng-template #spinner>
-<elix-spinner></elix-spinner>
-</ng-template>
 
 <ng-template let-element #detail >
   <ng-container *ngIf="element.model.index == selectedIndexDriver">
@@ -26,3 +23,4 @@
   </elix-table >
   </ng-container>
 </ng-template>
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
   Car,
@@ -6,18 +6,23 @@ import {
 } from 'src/app/module/transport/shared/backend/contractors/driver-response';
 import { IDataSourceMaterialTable } from 'src/app/shared/utils/interfaces/shared/iData-source-material-table';
 import { BehaviorSubject } from 'rxjs';
+import { SpinnerStateService } from '../../../../../shared/component';
 
 @Component({
   selector: 'elix-list-driver',
   templateUrl: './list-driver.component.html',
   styleUrls: ['./list-driver.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ListDriverComponent implements OnInit {
   public dataSourceDrivers: DriverResponse[] | any;
   public selectedDriver$: BehaviorSubject<IDataSourceMaterialTable<DriverResponse> | null>;
   public selectedIndexDriver: number;
 
-  constructor(private readonly _activate: ActivatedRoute) {
+  constructor(
+    private readonly _activate: ActivatedRoute,
+    private spinnerStateService: SpinnerStateService
+  ) {
     this.selectedDriver$ =
       new BehaviorSubject<IDataSourceMaterialTable<DriverResponse> | null>(
         null
@@ -32,8 +37,12 @@ export class ListDriverComponent implements OnInit {
         const model = <DriverResponse>driver;
         model.carsInit = this._initCarShared(driver.cars);
         model.index = index;
+        this.spinnerStateService.setStateBehaviorSpinner(false);
         return {
-          actions: this._openCar(),
+          actions:
+            driver.cars.length <= 0
+              ? () => {}
+              : this._openCar(driver.cars.length),
           editable: false,
           model: {
             ...model,
@@ -62,17 +71,18 @@ export class ListDriverComponent implements OnInit {
     return carsDataSource;
   }
 
-  private _openCar() {
+  private _openCar(cars: number) {
     return [
       {
         iconClass: 'fa_solid:stethoscope',
-        classCss: 'check',
+        classCss: 'driver__existing',
         method: (resp: IDataSourceMaterialTable<DriverResponse>) => {
           this._findDriver(resp);
         },
       },
     ];
   }
+
   private _newCar() {
     return [
       {
