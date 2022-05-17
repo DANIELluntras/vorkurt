@@ -1,0 +1,45 @@
+elix-repository-tab-project .mat-tab-list.mat-tab-nav-bar {
+  color: white;
+  padding-bottom: 2px;
+}
+
+elix-repository-tab-project .vorkurt__margin a .mat-tab-list {
+  padding-top: 5px;
+}
+
+elix-repository-tab-project .vorkurt__margin a .mat-tab-links {
+  margin-top: -2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+elix-repository-tab-project .vorkurt__margin a.active1 {
+  border-right: 1px;
+  border-left: 1px;
+  border: solid #1ea7fd;
+  border-bottom: none;
+  background: #22272e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+
+elix-repository-tab-project .vorkurt__margin a.active1 .mat-tab-links {
+  margin-top: -6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 22px;
+}
+
+elix-repository-tab-project .mat-tab-nav-bar {
+  color: white;
+}
+
+elix-repository-tab-project .forkurt__border {
+  border-bottom: 1px solid #1ea7fd;
+}
+
+elix-repository-tab-project .vorkurt__margin {
+  margin-bottom: -1px;
+}
+/*# sourceMappingURL=repository-tab-project.component.css.map */

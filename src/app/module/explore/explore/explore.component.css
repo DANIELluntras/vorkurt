@@ -1,0 +1,19 @@
+.map-container {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 90%;
+  width: 70%;
+}
+
+#map {
+  height: 100%;
+}
+/*# sourceMappingURL=explore.component.css.map */

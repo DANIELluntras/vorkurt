@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,yBAAyB;CACjC",
+    "sources": [
+        "items-tooltip.component.scss"
+    ],
+    "names": [],
+    "file": "items-tooltip.component.css"
+}

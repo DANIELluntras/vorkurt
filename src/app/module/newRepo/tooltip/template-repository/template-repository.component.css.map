@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,4BAD0B,CAC1B,GAAG,CAAC,GAAG,AAAA,MAAM,CAAC;EACZ,UAAU,EAAE,OAAO;CAKpB;;AAPH,AAII,4BAJwB,CAC1B,GAAG,CAAC,GAAG,AAAA,MAAM,CAGX,MAAM,CAAC;EACL,KAAK,EAAE,OAAO;CACf;;AANL,AASE,4BAT0B,CAS1B,MAAM,CAAC;EACL,QAAQ,EAAE,MAAM;EAChB,aAAa,EAAE,QAAQ;CACxB",
+    "sources": [
+        "template-repository.component.scss"
+    ],
+    "names": [],
+    "file": "template-repository.component.css"
+}

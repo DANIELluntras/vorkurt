@@ -1,0 +1,11 @@
+.vorkurt__header__width-container {
+  width: 35.333333rem;
+}
+
+.vorkurt__header-newRepo-header mat-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: red;
+}
+/*# sourceMappingURL=header-new-repo.component.css.map */

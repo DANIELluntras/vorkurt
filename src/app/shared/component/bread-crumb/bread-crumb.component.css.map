@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "bread-crumb.component.scss"
+    ],
+    "names": [],
+    "file": "bread-crumb.component.css"
+}

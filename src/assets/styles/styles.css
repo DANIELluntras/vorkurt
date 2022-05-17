@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #2049a8, #294c54);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
+}
+/*# sourceMappingURL=styles.css.map */

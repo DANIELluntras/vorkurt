@@ -5,7 +5,19 @@
 }
 
 .elix__height {
-  height: 94%;
+  height: 100%;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes gradient {
@@ -25,6 +37,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   font-size: 50px;
+  -webkit-transition: background 1s, border-color 0.2s;
   transition: background 1s, border-color 0.2s;
 }
 
@@ -34,43 +47,53 @@
   width: 500px;
   padding: 1rem;
   border-radius: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
   font-size: 30px;
   margin-left: 650px;
+  -webkit-transition: all 5s;
   transition: all 5s;
 }
 
 input {
-  color: rgb(227, 221, 221);
+  color: #e3dddd;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 33px;
   padding: 20px;
   margin: 5px;
-  // background-color: #fff;
-  &:hover {
-    color: rgb(9, 2, 2);
-    background-color: #fff;
-  }
+}
+
+input:hover {
+  color: #090202;
+  background-color: #fff;
 }
 
 .auth__background-container-form__buttom__input_primary-input {
-  color: rgb(15, 5, 5);
+  color: #0f0505;
   padding: 2rem;
   border: 1px solid #1a0808;
-  &:hover {
-    border-radius: 13px;
-    color: rgb(227, 226, 240);
-    transition: all 3s linear;
-  }
+}
+
+.auth__background-container-form__buttom__input_primary-input:hover {
+  border-radius: 13px;
+  color: #e3e2f0;
+  -webkit-transition: all 3s linear;
+  transition: all 3s linear;
 }
 
 .auth__background-container-form__forget-password {
-  color: rgb(249, 246, 246);
+  color: #f9f6f6;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: left;
   font-size: 30px;
@@ -80,7 +103,7 @@ input {
 }
 
 .auth__background-container-form__buttom__input__primary-pasword {
-  color: rgb(245, 235, 235);
+  color: #f5ebeb;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: left;
   font-size: 30px;
@@ -90,25 +113,27 @@ input {
 }
 
 .auth__background-container-form--create-new-user {
-  color: rgb(2, 6, 21);
+  color: #020615;
   font-size: 30px;
   font-weight: 600;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .auth__background-container-form-logedIn__button {
-  color: rgb(254, 251, 251);
-  background-color: rgb(0, 0, 0);
+  color: #fefbfb;
+  background-color: black;
   height: 40px;
   width: 300px;
   font-size: 35px;
+  -webkit-transition: all 1s linear;
   transition: all 1s linear;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  &:hover {
-    font-size: 35px;
-    color: rgb(3, 0, 0);
-    background-color: rgb(244, 243, 248);
-  }
+}
+
+.auth__background-container-form-logedIn__button:hover {
+  font-size: 35px;
+  color: #030000;
+  background-color: #f4f3f8;
 }
 
 .auth__background-paragraf {
@@ -135,3 +160,4 @@ input {
   margin: 100px;
   color: black;
 }
+/*# sourceMappingURL=auth.component.css.map */
