@@ -4,6 +4,7 @@
             <div class="auth__background-header__up flex flex-1 justify-end ml-20 pt-3">
                 <h1 class="auth__background-header__up-title text-white text-9xl  font-mono">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
             </div>
+            
             <!-- this is the bottom button -->
             <div class=" flex flex-1 justify-end auth__background-header__buttom">
                 <button mat-ripple class="auth__background-header__buttom--botton bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3  auth__background-container-form-logedIn__button" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
