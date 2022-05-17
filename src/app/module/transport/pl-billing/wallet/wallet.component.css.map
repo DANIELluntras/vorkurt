@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,QAAQ,EAAE,MAAM;EAChB,MAAM,EAAE,IAAI;CACb",
-    "sources": [
-        "wallet.component.scss"
-    ],
-    "names": [],
-    "file": "wallet.component.css"
-}

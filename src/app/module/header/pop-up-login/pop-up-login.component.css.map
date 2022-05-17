@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,YAAY,EAAE,OAAO;EACrB,UAAU,EAAE,8BAA8B;EAC1C,OAAO,EAAE,SAAS;EAClB,MAAM,EAAE,WAAW;EACnB,QAAQ,EAAE,QAAQ;EAClB,0BAA0B,EAAE,IAAI;EAChC,yBAAyB,EAAE,IAAI;CAMhC;;AAbD,AASE,mBATiB,CASjB,oBAAoB,CAAC;EACnB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;CACP;;AAGH,AAAA,EAAE,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,GAAG;CACb",
-    "sources": [
-        "pop-up-login.component.scss"
-    ],
-    "names": [],
-    "file": "pop-up-login.component.css"
-}
