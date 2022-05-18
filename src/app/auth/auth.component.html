@@ -4,7 +4,7 @@
             <div class="auth__background-header__up flex flex-1 justify-end ml-20 pt-3">
                 <h1 class="auth__background-header__up-title text-white text-9xl  font-mono">{{!logedIn ? 'Create' : 'Vorkurt'}}</h1>
             </div>
-            
+
             <!-- this is the bottom button -->
             <div class=" flex flex-1 justify-end auth__background-header__buttom">
                 <button mat-ripple class="auth__background-header__buttom--botton bg-white hover:border-2 hover:bg-blue-100 rounded-md text-white pr-3 pl-3 pb-2 pt-2 text-blue-900 mt-3 mr-3  auth__background-container-form-logedIn__button" (click)="changeSignIn()">{{logedIn ? 'Sign Up' : 'Sign In'}}</button>
@@ -16,17 +16,17 @@
             <form class="auth__background-container__form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
                 <div class="flex-col mt-3 mb-8  auth__background-container-form__header">
                     <div elixInputPrimary class=" auth__background-container-form__buttom__input-primary">
-                        <h1 class="auth__background-container-form__header--input_primary__sign__in">Sign In</h1>
-                        <h1 class="text-4xl auth__background-container-form--create-new-user">Username</h1>
+                        <h1 class="auth__background-container-form__header-input-primary__sign-in">Sign In</h1>
+                        <h1 class="text-4xl auth__background-container-form__create__new-user">Username</h1>
                         <input type="email" class="auth__background-container-form__header--input_primary-email__password" ngModel name="email" required>
                     </div>
                     <span *ngIf="feedback.email" class="text-red-600 absolute my-1 auth__background-container-form__header__feed-back  "> * email is not valid</span>
                 </div>
                 <div class="flex-col mt-3 mb-8  auth__background-container-form__buttom">
-                    <div elixInputPrimary class="auth__background-container-form__buttom__input_primary">
+                    <div elixInputPrimary class="auth__background-container-form__buttom__input-primary">
              
-                        <h1 class="text-white text-4xl auth__background-container-form__buttom__input__primary-pasword ">Password</h1>
-                        <input class=" auth__background-container-form__header--input_primary-email__password" type="password" minlength="6" ngModel name="password" required>
+                        <h1 class="text-white text-4xl auth__background-container-form__buttom-input__primary-pasword ">Password</h1>
+                        <input class=" auth__background-container-form__header-input_primary-email__password" type="password" minlength="6" ngModel name="password" required>
                     </div>
                     <span *ngIf="feedback.password" class="text-red-600 absolute my-1  auth__background-container-form__buttom-feedback__password"> * Password to short</span>
                 </div>
