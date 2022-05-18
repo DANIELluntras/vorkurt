@@ -1,8 +1,0 @@
-elix-list-driver .driver__unexisting {
-  color: var(--primary-color-text);
-}
-
-elix-list-driver .driver__existing {
-  color: var(--primary-color-input);
-}
-/*# sourceMappingURL=list-driver.component.css.map */
