@@ -48,9 +48,9 @@ img {
 input {
   color: rgb(227, 221, 221);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 33px;
-  padding: 20px;
-  margin: 5px;
+  font-size: 33rem;
+  padding: 20rem;
+  margin: 5rem;
   // background-color: #fff;
   &:hover {
     color: rgb(9, 2, 2);
@@ -67,16 +67,6 @@ input {
     color: rgb(227, 226, 240);
     transition: all 3s linear;
   }
-}
-
-.auth__background-container-form__forget-password {
-  color: rgb(249, 246, 246);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: left;
-  font-size: 30px;
-  padding: 6px;
-  color: #fff;
-  padding: 1rem;
 }
 
 .auth__background-container-form__buttom-input__primary-pasword {
@@ -128,10 +118,3 @@ input {
   margin: 100px;
 }
 
-.auth__background-container-form__header-input-primary__sign-in {
-  text-align: center;
-  padding: 120px;
-  font-size: 40px;
-  margin: 100px;
-  color: black;
-}
