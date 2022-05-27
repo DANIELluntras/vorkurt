@@ -1,0 +1,95 @@
+elix-added-driver {
+  .added-driver__ {
+    &control {
+      display: flex;
+
+      label {
+        flex: 1;
+      }
+
+      input {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &pack {
+      box-shadow: 0 0 4px 0 rgb(255 255 255 / 93%);
+      border-radius: 1rem;
+
+      &-wrapper {
+        overflow-y: auto;
+        height: 31rem;
+      }
+    }
+
+    &select-field {
+      position: relative;
+
+      .mat-form-field {
+        .mat-form-field-wrapper {
+          padding-bottom: 0 !important;
+        }
+
+        .mat-form-field-underline {
+          display: none;
+        }
+
+        .mat-form-field-flex {
+          background: var(--primary-background-input) !important;
+          border-radius: 0.3rem !important;
+          padding-left: 0.5rem !important;
+          color: var(--primary-color-input) !important;
+
+          .mat-form-field-infix {
+            border: 0 !important;
+          }
+        }
+
+        &:after {
+          display: inline-block !important;
+          position: absolute !important;
+          height: 100% !important;
+          width: 100% !important;
+          top: 0 !important;
+          left: 0 !important;
+        }
+      }
+    }
+
+    &cars {
+      max-height: 20rem;
+
+      mat-table {
+        overflow-y: scroll;
+        max-height: inherit;
+      }
+    }
+
+    elix-added-driver {
+      .action {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .driver__ {
+    &packs {
+      max-height: 20rem;
+
+      mat-table {
+        width: inherit;
+        min-width: inherit !important;
+        overflow-y: scroll;
+        max-height: inherit;
+
+        mat-row {
+          mat-cell[class*="package-from-"] {
+            background: rgba(49, 133, 156, 0.1) !important;
+          }
+        }
+      }
+    }
+  }
+}

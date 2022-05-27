@@ -1,34 +1,29 @@
 <div class="vorkurt__border-bottom pb-5 mb-6">
   <div class="flex">
     <div class="w-44">
-      <span>
-        Owner <span class="text-red-600">
-        *
-      </span>
-      </span>
+      <span> Owner <span class="text-red-600"> * </span> </span>
     </div>
     <div>
-      <span>
-        Repository Name <span class="text-red-600">
-        *
-      </span>
-      </span>
+      <span> Repository Name <span class="text-red-600"> * </span> </span>
     </div>
   </div>
   <div class="flex pt-1 mb-2">
     <div #userName>
-      <button mat-raised-button (click)="openServices($event)"
-              class="w-max flex vorkurt__color-background vorkurt__color-text text-base font-normal
-               vorkurt__border-color vorkurt__header-newRepo-header
-          "
-              style="padding-left: 2px;"
+      <button
+        mat-raised-button
+        (click)="openServices($event)"
+        class="w-max flex vorkurt__color-background vorkurt__color-text text-base font-normal vorkurt__border-color vorkurt__header-newRepo-header"
+        style="padding-left: 2px"
       >
         <div class="flex mx-2">
           <div>
-            {{user ? user : 'User Name'}}
+            {{ user ? user : "User Name" }}
           </div>
           <div>
-            <mat-icon class="flex fixed" [svgIcon]="'fa_solid:sort-down'"></mat-icon>
+            <mat-icon
+              class="flex fixed"
+              [svgIcon]="'fa_solid:sort-down'"
+            ></mat-icon>
           </div>
         </div>
       </button>
@@ -44,12 +39,13 @@
           name="price"
           id="repo"
           class="focus:vorkurt__border-input h-9 vorkurt__background-primary focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"
-        >
+        />
       </div>
     </div>
   </div>
   <div class="mb-2">
-    Great repository names are short an memorable. Need inspiration? How about musical-umbrella?
+    Great repository names are short an memorable. Need inspiration? How about
+    musical-umbrella?
   </div>
   <div class="mt-5">
     <div class="text-base font-normal">
@@ -61,9 +57,8 @@
       name="price"
       id="description"
       class="focus:vorkurt__border-input h-9 vorkurt__background-primary focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"
-    >
+    />
   </div>
-
 </div>
 <div class="flex vorkurt__border-bottom pb-5 mb-6">
   <div>
@@ -71,14 +66,16 @@
       <mat-checkbox class="example-margin">
         <div class="flex">
           <div class="flex justify-center items-center mr-2">
-            <mat-icon class="text-white vorkurt__size-icon text-xl" [svgIcon]="'fa_solid:book'"></mat-icon>
+            <mat-icon
+              class="text-white vorkurt__size-icon text-xl"
+              [svgIcon]="'fa_solid:book'"
+            ></mat-icon>
           </div>
           <div class="flex flex-col">
-            <span class="h-3 text-base">
-              Public
-            </span>
+            <span class="h-3 text-base"> Public </span>
             <span>
-              Anyone on the internet can see this repository. You choose who can commit.
+              Anyone on the internet can see this repository. You choose who can
+              commit.
             </span>
           </div>
         </div>
@@ -86,15 +83,14 @@
       <mat-checkbox class="example-margin my-3">
         <div class="flex">
           <div class="flex justify-center items-center mr-2">
-            <mat-icon class="text-white vorkurt__size-icon" [svgIcon]="'fa_solid:lock'"></mat-icon>
+            <mat-icon
+              class="text-white vorkurt__size-icon"
+              [svgIcon]="'fa_solid:lock'"
+            ></mat-icon>
           </div>
           <div class="flex flex-col">
-            <span class="h-3 text-base">
-               Private
-            </span>
-            <span>
-              You choose who can see and commit to this repository
-            </span>
+            <span class="h-3 text-base"> Private </span>
+            <span> You choose who can see and commit to this repository </span>
           </div>
         </div>
       </mat-checkbox>

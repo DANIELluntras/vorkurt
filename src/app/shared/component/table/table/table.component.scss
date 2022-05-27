@@ -9,9 +9,13 @@ elix-table {
     overflow: hidden;
   }
 
+  .header-border-left {
+    border-left: 1px solid;
+  }
+
   mat-header-row {
     mat-header-cell {
-      justify-content: center;
+      justify-content: flex-start;
       border-spacing: 2rem;
     }
   }
@@ -31,10 +35,19 @@ elix-table {
     }
 
     mat-cell {
-      justify-content: center;
+      justify-content: flex-start;
       position: relative;
-      min-height: 2rem;
-
+      min-height: 1rem;
+      mat-form-field {
+        div {
+          padding: 0 !important;
+          border: 0 !important;
+          input {
+            border: 1px solid;
+            box-shadow: inset 0px 0px 3px 1px rgb(0 0 255 / 20%);
+          }
+        }
+      }
       textarea {
         background: inherit;
         height: 1.95rem;
@@ -61,12 +74,22 @@ elix-table {
 
   .header-color {
     background: #2d333b;
+    z-index: 99 !important;
   }
+
+  .mat-form-field-infix {
+    width: auto;
+  }
+
   .example-detail-row {
     min-height: 0 !important;
+
     mat-cell {
       min-height: inherit;
-      justify-content: flex-end;
+
+      .mat-form-field-infix {
+        width: auto !important;
+      }
     }
   }
 }

@@ -5,8 +5,8 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { BaseColumn } from '../../base-column';
-import { ElixTooltipService } from '../../../../utils/services/overlay/elix-tooltip.service';
-import { IDataSourceMaterialTable } from '../../../../utils/interfaces/shared/iData-source-material-table';
+import { ElixTooltipService } from '../../../../utils/services';
+import { DataSourceMaterialTable } from '../../../../utils/interfaces';
 import { OverlayRef } from '@angular/cdk/overlay';
 
 @Component({
@@ -29,7 +29,7 @@ export class ColumnAreaTextComponent extends BaseColumn {
     super();
   }
 
-  openTooltip(element: HTMLElement, model: IDataSourceMaterialTable<any>) {
+  openTooltip(element: HTMLElement, model: DataSourceMaterialTable<any>) {
     this.value = false;
     if (!this.tooltipOverlay || !this.tooltipOverlay.hasAttached()) {
       this.vars = model.model[this.field];
@@ -49,7 +49,7 @@ export class ColumnAreaTextComponent extends BaseColumn {
     this.tooltipOverlay.dispose();
   }
 
-  doubleClick(element: IDataSourceMaterialTable<any>, value: boolean) {
+  doubleClick(element: DataSourceMaterialTable<any>, value: boolean) {
     this.value = true;
     element.editable = value;
   }

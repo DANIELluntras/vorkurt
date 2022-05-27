@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>cypress.json</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" media="all" href="doc-style.css" />
-  <script src="doc-filelist.js"></script>
-  <script>
-    var relativeDir = "";
-    var thisFile = "cypress.json";
-    var defaultSidebar = true;
-  </script>
-  <script src="doc-script.js"></script>
-
-</head>
-<body>
-  <div id="sidebar_wrapper">
-    <div id="sidebar_switch">
-      <span class="tree">Files</span>
-      <span class="headings">Headings</span>
+  <head>
+    <title>cypress.json</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" media="all" href="doc-style.css" />
+    <script src="doc-filelist.js"></script>
+    <script>
+      var relativeDir = "";
+      var thisFile = "cypress.json";
+      var defaultSidebar = true;
+    </script>
+    <script src="doc-script.js"></script>
+  </head>
+  <body>
+    <div id="sidebar_wrapper">
+      <div id="sidebar_switch">
+        <span class="tree">Files</span>
+        <span class="headings">Headings</span>
+      </div>
+      <div id="tree"></div>
+      <div id="headings"></div>
     </div>
-    <div id="tree"></div>
-    <div id="headings">
+    <div id="sidebar-toggle"></div>
+    <div id="container">
+      <div class="background highlight"></div>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td class="docs">
+              <h1>cypress.json</h1>
+            </td>
+            <td class="code highlight"></td>
+          </tr>
 
-    </div>
-  </div>
-  <div id="sidebar-toggle"></div>
-  <div id="container">
-    <div class="background highlight"></div>
-<table cellpadding="0" cellspacing="0">
-  <tbody>
-    
-      <tr>
-        <td class="docs">
-          <h1>cypress.json</h1>
-        </td>
-        <td class="code highlight"></td>
-      </tr>
-    
-    
-      <tr>
-        <td class="docs">
-          <div class="pilwrap">
-  <a class="pilcrow" href="#section-1" id="section-1"></a>
-</div>
-
-        </td>
-        <td class="code highlight">
-          <pre class="json">{
+          <tr>
+            <td class="docs">
+              <div class="pilwrap">
+                <a class="pilcrow" href="#section-1" id="section-1"></a>
+              </div>
+            </td>
+            <td class="code highlight">
+              <pre class="json">{
   <span class="hljs-attr">"integrationFolder"</span>: <span class="hljs-string">"cypress/integration"</span>,
   <span class="hljs-attr">"supportFile"</span>: <span class="hljs-string">"cypress/support/index.ts"</span>,
   <span class="hljs-attr">"videosFolder"</span>: <span class="hljs-string">"cypress/videos"</span>,
@@ -56,12 +50,10 @@
   <span class="hljs-attr">"baseUrl"</span>: <span class="hljs-string">"http://localhost:4200"</span>
 }
 </pre>
-        </td>
-      </tr>
-    
-  </tbody>
-</table>
-
-  </div>
-</body>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>

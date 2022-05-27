@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { IActionMaterialColumn } from '../../../../../shared/utils/interfaces/shared';
+import {
+  DataSourceMaterialTable,
+  IActionMaterialColumn,
+} from '../../../../../shared/utils/interfaces';
 import { ItemListService } from '../../utils/services';
 import { INewItemTypes } from '../../utils/interfaces';
-import { IDataSourceMaterialTable } from '../../../../../shared/utils/interfaces/shared/iData-source-material-table';
 
 @Component({
   selector: 'elix-list-items',
@@ -23,7 +25,7 @@ export class ListItemsComponent implements OnInit {
           actions: this.openAction(),
           editable: false,
           model: resp,
-        } as IDataSourceMaterialTable<INewItemTypes>;
+        } as DataSourceMaterialTable<INewItemTypes>;
       });
     });
   }
@@ -33,7 +35,7 @@ export class ListItemsComponent implements OnInit {
       {
         iconClass: 'fa_solid:check',
         classCss: 'check',
-        method: (row: IDataSourceMaterialTable<INewItemTypes>) => {
+        method: (row: DataSourceMaterialTable<INewItemTypes>) => {
           this._listItem.updateItem('item_new', row.model.uuid, row.model);
         },
       },

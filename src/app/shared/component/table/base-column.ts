@@ -19,4 +19,7 @@ export abstract class BaseColumn {
 
   @Input()
   iconClass: string;
+
+  @Input()
+  public editRow: boolean = false;
 }

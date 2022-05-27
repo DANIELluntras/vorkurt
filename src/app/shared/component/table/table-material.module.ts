@@ -11,6 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared.module';
 import { TooltipComponent } from '../tooltip/tooltip.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ColumnNumberComponent } from './columns/column-number/column-number.component';
+import { ColumnSelectComponent } from './columns/column-select/column-select.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,19 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
     ColumnAreaTextComponent,
     ColumnIconActionComponent,
     TooltipComponent,
+    ColumnNumberComponent,
+    ColumnSelectComponent,
   ],
   imports: [
     CommonModule,
-    MatTableModule,
-    MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     FormsModule,
+    MatTableModule,
+    SharedModule,
+    MatSelectModule,
   ],
   exports: [
     TableComponent,
@@ -34,6 +43,8 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
     ColumnAreaTextComponent,
     ColumnIconActionComponent,
     TooltipComponent,
+    ColumnNumberComponent,
+    ColumnSelectComponent,
   ],
 })
 export class TableMaterialModule {}

@@ -1,0 +1,288 @@
+<div>
+  <div>
+    <h1>Driver</h1>
+  </div>
+  <div>
+    <form [formGroup]="driverForm" class="flex gap-4">
+      <div class="w-1/3">
+        <div class="w-64">
+          <div class="added-driver__control" elixInputSecondary>
+            <label for="first-name">First Name: </label>
+            <input formControlName="firstName" id="first-name" type="text" />
+          </div>
+          <div class="added-driver__control" elixInputSecondary>
+            <label for="last-name">Last Name: </label>
+            <input formControlName="lastName" id="last-name" type="text" />
+          </div>
+          <div class="added-driver__control" elixInputSecondary>
+            <label for="last-name">Car License </label>
+            <input formControlName="driverLicense" type="text" />
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <h3>Address</h3>
+            <div class="w-64" formGroupName="address">
+              <div class="added-driver__control" elixInputSecondary>
+                <label for="last-name">street </label>
+                <input formControlName="street" type="text" />
+              </div>
+              <div class="added-driver__control" elixInputSecondary>
+                <label for="last-name">city </label>
+                <input formControlName="city" type="text" />
+              </div>
+              <div class="added-driver__control" elixInputSecondary>
+                <label for="last-name">number </label>
+                <input formControlName="number" type="text" />
+              </div>
+              <div class="added-driver__control" elixInputSecondary>
+                <label for="last-name">Postal Code </label>
+                <input
+                  class="added-driver__control"
+                  elixInputSecondary
+                  formControlName="postalCode"
+                  type="number"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="m-2">
+            <button (click)="addCar()" elixBtnPrimary>
+              <div class="flex">
+                <mat-icon
+                  [svgIcon]="'fa_solid:plus'"
+                  class="ml-1.5 mr-2.5"
+                ></mat-icon>
+                <mat-icon
+                  [svgIcon]="'fa_solid:car'"
+                  class="ml-1.5 mr-2.5"
+                ></mat-icon>
+                Car
+              </div>
+            </button>
+          </div>
+          <div class="m-2">
+            <button elixBtnPrimary>New Package</button>
+          </div>
+        </div>
+        <button
+          (click)="sendValues(); $event.preventDefault()"
+          elixBtnPrimary
+          type="button"
+        >
+          Submit
+        </button>
+      </div>
+      <div>
+        <div *ngIf="cars?.controls?.length; else noCars">
+          <elix-table [dataSource]="dataSourceCars" class="added-driver__cars">
+            <elix-column-text
+              [editRow]="true"
+              className="plateNumber"
+              field="plateNumber"
+              name="Plate Number"
+            ></elix-column-text>
+            <elix-column-number
+              [editRow]="true"
+              className="reservoirFuel"
+              field="reservoirFuel"
+              name="Reservoir Fuel"
+            ></elix-column-number>
+            <elix-column-number
+              [editRow]="true"
+              [iconClass]="'elixir'"
+              className="kgPerWeight"
+              field="kgPerWeight"
+              name="Kg Per Weight"
+            ></elix-column-number>
+            <elix-column-icon-action
+              className="action"
+              field="action"
+              name="Action"
+            ></elix-column-icon-action>
+          </elix-table>
+        </div>
+        <div>
+          <div *ngIf="carId >= 0; else noPacks">
+            <div formArrayName="cars">
+              <div [formGroupName]="carId">
+                <div
+                  class="added-driver__pack-wrapper"
+                  formArrayName="packages"
+                >
+                  <div
+                    *ngFor="
+                      let pack of packages(carId)?.controls;
+                      let packIndex = index
+                    "
+                    class="my-2"
+                  >
+                    <div
+                      [formGroupName]="packIndex"
+                      class="added-driver__pack p-3 mx-0.5"
+                    >
+                      <div class="flex gap-2 m-2">
+                        <div class="flex gap-2" elixInputSecondary>
+                          {{ packIndex }}
+                          <input formControlName="note" placeholder="Note" />
+                        </div>
+                        <div class="added-driver__select-field">
+                          <mat-form-field elixSelectFieldPrimary>
+                            <mat-select
+                              formControlName="repayment"
+                              name="typeBox"
+                            >
+                              <mat-option
+                                *ngFor="let repayment of [true, false]"
+                                [value]="repayment"
+                              >
+                                {{ repayment }}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div
+                          class="added-driver__select-field flex"
+                          formGroupName="typeBox"
+                        >
+                          <div>
+                            <mat-form-field elixSelectFieldPrimary>
+                              <mat-select
+                                formControlName="envelop"
+                                name="typeBox"
+                              >
+                                <mat-option
+                                  *ngFor="let envelop of [true, false]"
+                                  [value]="envelop"
+                                >
+                                  {{ envelop }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <h3>Address Package</h3>
+                        <div class="flex" formGroupName="packageAddress">
+                          <div elixInputSecondary>
+                            <label>Street </label>
+                            <input
+                              formControlName="street"
+                              placeholder="Street"
+                            />
+                          </div>
+                          <div elixInputSecondary>
+                            <label>City </label>
+                            <input formControlName="city" placeholder="City" />
+                          </div>
+                          <div elixInputSecondary>
+                            <label>Number </label>
+                            <input
+                              formControlName="number"
+                              placeholder="Number"
+                            />
+                          </div>
+                          <div elixInputSecondary>
+                            <label>Postal Code </label>
+                            <input
+                              formControlName="postalCode"
+                              placeholder="Postal Code"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="added-driver__select-field flex"
+                          formGroupName="refoundType"
+                        >
+                          <div>
+                            <div>
+                              <span>Recipient</span>
+                            </div>
+                            <mat-form-field elixSelectFieldPrimary>
+                              <mat-select
+                                formControlName="toRecipient"
+                                name="type-refound"
+                              >
+                                <mat-option
+                                  *ngFor="let typePck of [true, false]"
+                                  [value]="typePck"
+                                >
+                                  {{ typePck }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="added-driver__select-field flex"
+                          formGroupName="consignee"
+                        >
+                          <div class="my-1 flex items-center">
+                            <div>
+                              <span>Consignee</span>
+                            </div>
+                          </div>
+                          <div class="flex">
+                            <div elixInputSecondary>
+                              <label>Street</label>
+                              <input
+                                formControlName="street"
+                                placeholder="Street"
+                              />
+                            </div>
+                            <div elixInputSecondary>
+                              <label>City</label>
+                              <input
+                                formControlName="city"
+                                placeholder="City"
+                              />
+                            </div>
+                            <div elixInputSecondary>
+                              <label>House Number </label>
+                              <input
+                                formControlName="numberHouse"
+                                placeholder="Number House"
+                              />
+                            </div>
+                            <div elixInputSecondary>
+                              <label>Postal Code </label>
+                              <input
+                                formControlName="postalCode"
+                                placeholder="Postal Code"
+                              />
+                            </div>
+                            <div elixInputSecondary>
+                              <label>Apartment </label>
+                              <input
+                                formControlName="apartment"
+                                placeholder="Apartment"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <ng-template #noCars>
+    <div>No cars</div>
+  </ng-template>
+
+  <ng-template #noPacks>
+    <div>No packs</div>
+  </ng-template>
+</div>

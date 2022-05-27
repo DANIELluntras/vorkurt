@@ -3,7 +3,6 @@ build
 coverage
 
 # Ignore all HTML files:
-*.html
 
 src/assets/*
 .storybook/*
@@ -12,5 +11,6 @@ CHANGELOG.md
 CODE_OF_CONDUCT.md
 cypress/*
 .angular/*
+doc/*
 
 firebase.json

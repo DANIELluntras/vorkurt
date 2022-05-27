@@ -8,10 +8,10 @@ import {
   ViewChild,
 } from '@angular/core';
 import { PopUpStateService } from './pop-up-state.service';
-import { AuthService } from '../../../shared/utils/services';
-import { UserService } from '../../../shared/utils/services/user/user-service';
-import { SpinnerStateService } from '../../../shared/component/spinner/spinner-state.service';
-import { OverlayPopUpService } from '../../../shared/utils/services/overlay/overlay-pop-up.service';
+import { AuthService } from 'src/app/shared/utils/services';
+import { UserService } from 'src/app/shared/utils/services/user/user-service';
+import { SpinnerStateService } from 'src/app/shared/component';
+import { OverlayPopUpService } from 'src/app/shared/utils/services';
 
 @Component({
   selector: 'elix-pop-up-login',

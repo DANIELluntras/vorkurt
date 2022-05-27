@@ -1,9 +1,12 @@
-<elix-jumbotron *ngIf="notifications.length" [type]="'template'"
-                class="text-xl vorkurt__color-text flex vorkurt__container-template">
+<elix-jumbotron
+  *ngIf="notifications.length"
+  [type]="'template'"
+  class="text-xl vorkurt__color-text flex vorkurt__container-template"
+>
   <div *ngFor="let notification of notifications" class="flex flex-col">
     <div class="hover: cursor-pointer flex vorkurt__notification">
-      <div class="w-10">{{notification.id}}</div>
-      <div>{{notification.name}}</div>
+      <div class="w-10">{{ notification.id }}</div>
+      <div>{{ notification.name }}</div>
     </div>
   </div>
 </elix-jumbotron>

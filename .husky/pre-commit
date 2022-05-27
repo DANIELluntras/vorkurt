@@ -3,4 +3,5 @@
 
 npm run-script format
 npm run-script lint
+git add .
 git push

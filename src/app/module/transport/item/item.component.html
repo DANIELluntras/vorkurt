@@ -1,19 +1,24 @@
 <div class="item-wrapper">
   <div class="item-branch h-full">
     <div class="package-item flex flex-row items-center">
-
-      <span #buttonElement>
-      Package Item
-       </span>
+      <span #buttonElement> Package Item </span>
       <span class="flex-1">
         <mat-icon [svgIcon]="'fa_solid:star'"></mat-icon>
       </span>
-      <div class="item__pagination-button ">
-        <span class="mr-2">
-        1 of 1
-          </span>
-        <button elixBtnPrimary class="mr-5" (click)="goToPage('new')" [routerLink]="'new'" *ngIf="path"> New</button>
-        <button elixBtnPrimary (click)="goToPage('finish')" *ngIf="!path"> Finished</button>
+      <div class="item__pagination-button">
+        <span class="mr-2"> 1 of 1 </span>
+        <button
+          elixBtnPrimary
+          class="mr-5"
+          (click)="goToPage('new')"
+          [routerLink]="'new'"
+          *ngIf="path"
+        >
+          New
+        </button>
+        <button elixBtnPrimary (click)="goToPage('finish')" *ngIf="!path">
+          Finished
+        </button>
       </div>
     </div>
     <div class="package__item-content h-full">
@@ -21,6 +26,3 @@
     </div>
   </div>
 </div>
-
-
-

@@ -1,8 +1,12 @@
-<elix-jumbotron [type]="'template'" class="mt-2 flex vorkurt__container-template"
-                *ngIf="usersName">
+<elix-jumbotron
+  [type]="'template'"
+  class="mt-2 flex vorkurt__container-template"
+  *ngIf="usersName"
+>
   <div class="">
-    <div class="flex items-start flex cursor-pointer p-0.5 items-stretch hover:w-96"
-         (click)="onClick()"
+    <div
+      class="flex items-start flex cursor-pointer p-0.5 items-stretch hover:w-96"
+      (click)="onClick()"
     >
       <div class="w-10 flex items-center">
         <mat-icon [svgIcon]="'fa_solid:check'"></mat-icon>
@@ -11,7 +15,9 @@
         <!--        <img [src]='dataTemplate.icon'>-->
       </div>
       <div class="flex items-center">
-        <button class="vorkurt__color-text font-bold" mat-menu-item>{{usersName.user.email}}</button>
+        <button class="vorkurt__color-text font-bold" mat-menu-item>
+          {{ usersName.user.email }}
+        </button>
       </div>
     </div>
   </div>

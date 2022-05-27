@@ -3,17 +3,25 @@
     <div class="h-full transport__menu absolute">
       <div class="h-full">
         <div class="h-full">
-          <div class="flex-col overflow-y-auto  h-full overflow-hidden transport__menu-bar">
-            <div *ngFor="let route of routerForSideBar" [routerLinkActive]="'active'"
-                 [routerLink]="route.path"
-                 class="flex transport__menu-child relative cursor-pointer">
+          <div
+            class="flex-col overflow-y-auto h-full overflow-hidden transport__menu-bar"
+          >
+            <div
+              *ngFor="let route of routerForSideBar"
+              [routerLinkActive]="'active'"
+              [routerLink]="route.path"
+              class="flex transport__menu-child relative cursor-pointer"
+            >
               <mat-icon [svgIcon]="route.icon" class="ml-1.5 mr-2.5"></mat-icon>
               <div class="transport__text justify-start text-sm text-base">
-                <span> {{route.name}} </span>
+                <span> {{ route.name }} </span>
               </div>
             </div>
             <div class="flex transport__menu-child relative cursor-pointer">
-              <mat-icon [svgIcon]="'fa_solid:person-through-window'" class="ml-1.5 mr-2.5"></mat-icon>
+              <mat-icon
+                [svgIcon]="'fa_solid:person-through-window'"
+                class="ml-1.5 mr-2.5"
+              ></mat-icon>
               <div class="transport__text justify-start text-sm text-base">
                 <span> Logout</span>
               </div>
@@ -23,13 +31,15 @@
       </div>
     </div>
     <div class="ml-6 absolute transport__frame-content mr-6">
-      <elix-bread-crumb></elix-bread-crumb>
       <div *ngIf="!activeRoute">
         <router-outlet></router-outlet>
       </div>
-      <div *ngIf="activeRoute" class="flex flex-col justify-center item-center mt-24 transport__img">
+      <div
+        *ngIf="activeRoute"
+        class="flex flex-col justify-center item-center mt-24 transport__img"
+      >
         <div class="flex justify-center transport__airplane">
-          <img src="assets/img/transport.jpeg">
+          <img src="assets/img/transport.jpeg" />
         </div>
         <div>
           <a routerLink="items"></a>
@@ -37,5 +47,4 @@
       </div>
     </div>
   </div>
-
 </div>

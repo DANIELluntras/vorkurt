@@ -1,42 +1,72 @@
-<div class="bg-blue-700 sticky iufce__top"
-     [ngClass]="' vorkurt__background-thrid iufce__parrent-header background-' + background">
+<div
+  class="bg-blue-700 sticky iufce__top"
+  [ngClass]="
+    ' vorkurt__background-thrid iufce__parrent-header background-' + background
+  "
+>
   <div elixElixDrag class="flex pl-9 justify-center items-center h-16">
     <div class="w-8 h-8 mr-4 cursor-pointer" [routerLink]="'account'">
-      <mat-icon [svgIcon]="'fa_brands:github'" class="iufce__icon " [ngClass]="'colorIcon-'+color"></mat-icon>
+      <mat-icon
+        [svgIcon]="'fa_brands:github'"
+        class="iufce__icon"
+        [ngClass]="'colorIcon-' + color"
+      ></mat-icon>
     </div>
     <div elixInputPrimary class="flex flex-1 items-center">
-      <input  type="text" class="w-1/6 h-7 text-black pl-3 vorkurt__background-primary text-white"
-             [ngClass]="inputValue ? 'iufce__expand-input' :'' "
-             (focus)="resizeData($event, true)"
-             [(ngModel)]="inputValue"
-             (focusout)="resizeData($event, false)"
-      >
+      <input
+        type="text"
+        class="w-1/6 h-7 text-black pl-3 vorkurt__background-primary text-white"
+        [ngClass]="inputValue ? 'iufce__expand-input' : ''"
+        (focus)="resizeData($event, true)"
+        [(ngModel)]="inputValue"
+        (focusout)="resizeData($event, false)"
+      />
       <div class="ml-2 h-10 flex items-center">
-        <a class="text-white vorkurt__text-size-secondary flex items-center" routerLinkActive="active"
-           [routerLink]="['account/pull_request']" [ngClass]="'colorIcon-'+color">Pull request</a>
+        <a
+          class="text-white vorkurt__text-size-secondary flex items-center"
+          routerLinkActive="active"
+          [routerLink]="['account/pull_request']"
+          [ngClass]="'colorIcon-' + color"
+          >Pull request</a
+        >
       </div>
-      <div class="ml-2 vorkurt__router flex items-center cursor-pointer" *ngFor="let dataRouter of routerData" routerLinkActive="active" [routerLink]="[dataRouter.path]" >
-        <a class="text-white vorkurt__text-size-secondary"
-           [ngClass]="'colorIcon-'+color">{{dataRouter.name}}</a>
+      <div
+        class="ml-2 vorkurt__router flex items-center cursor-pointer"
+        *ngFor="let dataRouter of routerData"
+        routerLinkActive="active"
+        [routerLink]="[dataRouter.path]"
+      >
+        <a
+          class="text-white vorkurt__text-size-secondary"
+          [ngClass]="'colorIcon-' + color"
+          >{{ dataRouter.name }}</a
+        >
       </div>
     </div>
     <div class="flex pr-8">
       <div class="w-5 h-5" #notification>
-        <button [matBadge]='number === 0 ? "" : number ' (click)="openBadge()">
-          <mat-icon [svgIcon]="'fa_solid:bell'" class="iufce__icon cursor-pointer"
-                    [ngClass]="'colorIcon-'+color"></mat-icon>
+        <button [matBadge]="number === 0 ? '' : number" (click)="openBadge()">
+          <mat-icon
+            [svgIcon]="'fa_solid:bell'"
+            class="iufce__icon cursor-pointer"
+            [ngClass]="'colorIcon-' + color"
+          ></mat-icon>
         </button>
       </div>
       <div class="w-5 h-5 ml-2">
-        <mat-icon [svgIcon]="'fa_solid:plus'" class="iufce__icon cursor-pointer"
-                  [ngClass]="'colorIcon-'+color"></mat-icon>
+        <mat-icon
+          [svgIcon]="'fa_solid:plus'"
+          class="iufce__icon cursor-pointer"
+          [ngClass]="'colorIcon-' + color"
+        ></mat-icon>
       </div>
       <div class="w-5 h-5 ml-2" #pointIcon>
         <mat-icon
           (click)="retriveCoordinates($event)"
           [svgIcon]="'fa_solid:user'"
           class="iufce__icon cursor-pointer"
-          [ngClass]="'colorIcon-'+color"></mat-icon>
+          [ngClass]="'colorIcon-' + color"
+        ></mat-icon>
       </div>
     </div>
   </div>

@@ -3,7 +3,9 @@ import {
   ChangeDetectorRef,
   Component,
   ContentChildren,
+  EventEmitter,
   Input,
+  Output,
   QueryList,
   TemplateRef,
   ViewChild,
@@ -11,7 +13,7 @@ import {
 } from '@angular/core';
 import { MatColumnDef, MatTable } from '@angular/material/table';
 import { BaseColumn } from '../base-column';
-import { IDataSourceMaterialTable } from '../../../utils/interfaces/shared/iData-source-material-table';
+import { DataSourceMaterialTable } from '../../../utils/interfaces/shared/data-source-material-table';
 import { BehaviorSubject } from 'rxjs';
 import {
   animate,
@@ -42,10 +44,11 @@ export class TableComponent<T> implements AfterViewInit {
   @Input()
   extensible: boolean = false;
   @Input()
-  extandble$: BehaviorSubject<IDataSourceMaterialTable<T> | null>;
+  extandble$: BehaviorSubject<DataSourceMaterialTable<T> | null>;
   @Input()
   newElementExtandble: TemplateRef<any>;
 
+  @Output() onAddEntry: EventEmitter<any> = new EventEmitter<any>();
   columnsToDispaly: string[] = [];
   // this is where the magic happens:
   @ViewChild(MatTable, { static: true }) table: MatTable<T>;
@@ -76,7 +79,8 @@ export class TableComponent<T> implements AfterViewInit {
     } catch (err) {
       console.error(err);
     }
-
     this._changeDetectorRef.detectChanges();
   }
+
+  addNewEntry() {}
 }

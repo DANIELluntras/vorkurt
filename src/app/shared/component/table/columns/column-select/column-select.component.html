@@ -1,0 +1,19 @@
+<ng-container [matColumnDef]="field">
+  <mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef>
+    {{ name }}
+  </mat-header-cell>
+  <mat-cell [class]="className" mat-cell *matCellDef="let element">
+    <mat-form-field class="flex" appearance="outline">
+      {{ element.model[field].name }}
+      <mat-select
+        name="select"
+        [(ngModel)]="element.model[field]"
+        (ngModelChange)="element.model[field] = $event; changeEntity(element)"
+      >
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{ option.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-cell>
+</ng-container>

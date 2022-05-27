@@ -1,18 +1,19 @@
-<div #popUp
-     class="
- border-2
-  text-white
- w-44 elix__border-color
- border-solid
-"
-     (mouseenter)="pauseTimeout()"
-     (mouseleave)="resumeTimeOut()">
+<div
+  #popUp
+  class="border-2 text-white w-44 elix__border-color border-solid"
+  (mouseenter)="pauseTimeout()"
+  (mouseleave)="resumeTimeOut()"
+>
   <div>
     <div class="mt-2">
-      <p class="truncate">{{dataUser.email || dataUser.user.email}} </p>
+      <p class="truncate">{{ dataUser.email || dataUser.user.email }}</p>
     </div>
     <div>
-      <mat-progress-bar mode="determinate" class="pop__login-progress " [value]=start></mat-progress-bar>
+      <mat-progress-bar
+        mode="determinate"
+        class="pop__login-progress"
+        [value]="start"
+      ></mat-progress-bar>
     </div>
     <div class="flex justify-center">
       <button mat-flat-button (click)="signOut()">Sign Out</button>

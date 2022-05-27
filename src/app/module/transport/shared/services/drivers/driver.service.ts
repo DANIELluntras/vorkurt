@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
-import { DriverResponse } from '../../backend/contractors/driver-response';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../../../../environments/environment';
-import { SpinnerStateService } from '../../../../../shared/component';
+import { environment } from 'src/environments/environment';
+import { SpinnerStateService } from 'src/app/shared/component';
+import { Driver } from 'src/app/shared/utils/interfaces';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DriverService {
-  public getAllDrivers$: Subject<DriverResponse[]> = new Subject<
-    DriverResponse[]
-  >();
+  public getAllDrivers$: Subject<Driver[]> = new Subject<Driver[]>();
 
   constructor(
     private readonly _httpClient: HttpClient,
@@ -20,7 +18,7 @@ export class DriverService {
 
   public getAllDrivers() {
     this._sppinerService.setStateBehaviorSpinner(true);
-    return this._httpClient.get<DriverResponse[]>(
+    return this._httpClient.get<Driver[]>(
       `${environment.apiUrl}api/transport/driver`
     );
   }

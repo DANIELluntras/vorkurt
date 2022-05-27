@@ -1,0 +1,22 @@
+<ng-container [matColumnDef]="field">
+  <mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef>
+    {{ name }}
+  </mat-header-cell>
+  <mat-cell [class]="className" mat-cell *matCellDef="let element">
+    <mat-form-field
+      appearance="outline"
+      *ngIf="element.editable && editRow; else prettyText"
+      class="column-text__edit"
+    >
+      <input
+        type="number"
+        [(ngModel)]="element.model[field]"
+        matInput
+        (ngModelChange)="changeEntity(element)"
+      />
+    </mat-form-field>
+    <ng-template #prettyText>
+      {{ element.model[field] }}
+    </ng-template>
+  </mat-cell>
+</ng-container>

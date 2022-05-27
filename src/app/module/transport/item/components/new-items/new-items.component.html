@@ -1,201 +1,261 @@
-<div class="package__item-content" >
-	<div class="item-branch" >
-		<form #formDirective="ngForm" [formGroup]="items" >
-			<div class="package__item-content-child p-5" >
-				<div class="package__item__content-per" >
-					<div class="flex-row" >
-						<div ><span class="text-red-500" >*</span >
-							Package Item ID
-						</div >
-						<div elixInputPrimary >
-							<input class="overflow-ellipsis item-background__input" elixTooltipDirective type="text" id="pckItemId"
-							       readonly
-							       style="border:none"
-							       formControlName="pckItemId" >
-
-						</div >
-					</div >
-					<div >
-						<span class="text-red-500" >*</span >
-						<span >Item ID</span >
-						<span >
-							<div elixInputPrimary >
-								<input class="overflow-ellipsis item-background__input" readonly elixTooltipDirective id="item-id"
-								       type="text"
-								       formControlName="itemId" >
-							</div >
-            </span >
-					</div >
-					<div >
-						<span >Hazmat Package Type ID</span >
-						<div elixInputPrimary >
-							<input elixTooltipDirective id="hazmatPck" type="text" formControlName="hazmatPckTypeId" >
-						</div >
-					</div >
-					<div >
-						<span >Package weight</span >
-						<div elixInputPrimary >
-							<input id="pckWeight" type="text" formControlName="pckWeight" >
-						</div >
-					</div >
-					<div >
-						<span >Package width</span >
-						<div elixInputPrimary >
-							<input id="pckWidth" type="text" formControlName="pckWidth" >
-						</div >
-					</div >
-					<div >
-						<span >Unit Length</span >
-						<div class="vorkurt__primary-input" >
-							<input id="unitLength" type="text" formControlName="unitLength" >
-						</div >
-					</div >
-					<div >
-						<span >Diameter per Ship Unit</span >
-						<div elixInputPrimary >
-							<input id="diameterPerShipUnit" type="text" formControlName="diameterPerShipUnit" >
-						</div >
-					</div >
-					<div >
-						<span >Package item Type ID</span >
-						<div elixInputPrimary >
-							<input id="pckItemTypeId" type="text" formControlName="pckItemTypeId" >
-						</div >
-					</div >
-					<div >
-						<span >Inner Pack Packaging Unit</span >
-						<span >
+<div class="package__item-content">
+  <div class="item-branch">
+    <form #formDirective="ngForm" [formGroup]="items">
+      <div class="package__item-content-child p-5">
+        <div class="package__item__content-per">
+          <div class="flex-row">
+            <div>
+              <span class="text-red-500">*</span>
+              Package Item ID
+            </div>
+            <div elixInputPrimary>
+              <input
+                class="overflow-ellipsis item-background__input"
+                elixTooltipDirective
+                type="text"
+                id="pckItemId"
+                readonly
+                style="border: none"
+                formControlName="pckItemId"
+              />
+            </div>
+          </div>
+          <div>
+            <span class="text-red-500">*</span>
+            <span>Item ID</span>
+            <span>
+              <div elixInputPrimary>
+                <input
+                  class="overflow-ellipsis item-background__input"
+                  readonly
+                  elixTooltipDirective
+                  id="item-id"
+                  type="text"
+                  formControlName="itemId"
+                />
+              </div>
+            </span>
+          </div>
+          <div>
+            <span>Hazmat Package Type ID</span>
+            <div elixInputPrimary>
+              <input
+                elixTooltipDirective
+                id="hazmatPck"
+                type="text"
+                formControlName="hazmatPckTypeId"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Package weight</span>
+            <div elixInputPrimary>
+              <input id="pckWeight" type="text" formControlName="pckWeight" />
+            </div>
+          </div>
+          <div>
+            <span>Package width</span>
+            <div elixInputPrimary>
+              <input id="pckWidth" type="text" formControlName="pckWidth" />
+            </div>
+          </div>
+          <div>
+            <span>Unit Length</span>
+            <div class="vorkurt__primary-input">
+              <input id="unitLength" type="text" formControlName="unitLength" />
+            </div>
+          </div>
+          <div>
+            <span>Diameter per Ship Unit</span>
+            <div elixInputPrimary>
+              <input
+                id="diameterPerShipUnit"
+                type="text"
+                formControlName="diameterPerShipUnit"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Package item Type ID</span>
+            <div elixInputPrimary>
+              <input
+                id="pckItemTypeId"
+                type="text"
+                formControlName="pckItemTypeId"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Inner Pack Packaging Unit</span>
+            <span>
               <!--              {{20_inch_pipe}}-->
-            </span >
-					</div >
-					<div >
-						<span >Bulk Mixing Family ID</span >
-						<div elixInputPrimary >
-							<input id="bulkMixingFamilyId" type="text" formControlName="bulkMixingFamilyId" >
-						</div >
-					</div >
-				</div >
-				<div class="package__item__content-per" >
-					<!--						middle-->
-					<div >
-						<span >Description</span >
-						<div elixInputPrimary >
-							<textarea elixTooltipDirective id="description" formControlName="description" ></textarea >
-						</div >
-					</div >
-					<div >
-						<span >Priority</span >
-						<div elixInputPrimary >
-							<input id="priority" type="text" formControlName="priority" >
-						</div >
-					</div >
-					<div >
-						<span >Packaging unit</span >
-						<div elixInputPrimary >
-							<input id="pckUnit" type="text" formControlName="pckUnit" >
-						</div >
-					</div >
-					<div >
-						<span >Unit Volume</span >
-						<div elixInputPrimary >
-							<input id="unitVolume" type="text" formControlName="unitVolume" >
-						</div >
-					</div >
-					<div >
-						<span >Unit width</span >
-						<div elixInputPrimary >
-							<input id="unitWidth" type="text" formControlName="unitWidth" >
-						</div >
-					</div >
-					<div >
-						<span >Core Diameter</span >
-						<div elixInputPrimary >
-							<input id="coreDiameter" type="text" formControlName="coreDiameter" >
-						</div >
-					</div >
-					<div >
-						<span >THU Profile ID</span >
-						<div elixInputPrimary >
-							<input id="thuProfileId" type="text" formControlName="thuProfileId" >
-						</div >
-					</div >
-					<div >
-						<span >Inner Pack Size</span >
-						<div elixInputPrimary >
-							<input id="innerPackSize" type="text" formControlName="innerPackSize" >
-						</div >
-					</div >
-					<div >
-						<span >Compartment Type Profile ID</span >
-						<div elixInputPrimary >
-							<input id="compartmentTypeProfileId" type="text" formControlName="compartmentTypeProfileId" >
-						</div >
-					</div >
-				</div >
-				<div class="package__item__content-per" >
-					<div >
-						<span >Hazaradous</span >
-						<div elixInputPrimary >
-							<mat-checkbox
-                  formControlName="hazaradous"
+            </span>
+          </div>
+          <div>
+            <span>Bulk Mixing Family ID</span>
+            <div elixInputPrimary>
+              <input
+                id="bulkMixingFamilyId"
+                type="text"
+                formControlName="bulkMixingFamilyId"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="package__item__content-per">
+          <!--						middle-->
+          <div>
+            <span>Description</span>
+            <div elixInputPrimary>
+              <textarea
+                elixTooltipDirective
+                id="description"
+                formControlName="description"
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <span>Priority</span>
+            <div elixInputPrimary>
+              <input id="priority" type="text" formControlName="priority" />
+            </div>
+          </div>
+          <div>
+            <span>Packaging unit</span>
+            <div elixInputPrimary>
+              <input id="pckUnit" type="text" formControlName="pckUnit" />
+            </div>
+          </div>
+          <div>
+            <span>Unit Volume</span>
+            <div elixInputPrimary>
+              <input id="unitVolume" type="text" formControlName="unitVolume" />
+            </div>
+          </div>
+          <div>
+            <span>Unit width</span>
+            <div elixInputPrimary>
+              <input id="unitWidth" type="text" formControlName="unitWidth" />
+            </div>
+          </div>
+          <div>
+            <span>Core Diameter</span>
+            <div elixInputPrimary>
+              <input
+                id="coreDiameter"
+                type="text"
+                formControlName="coreDiameter"
+              />
+            </div>
+          </div>
+          <div>
+            <span>THU Profile ID</span>
+            <div elixInputPrimary>
+              <input
+                id="thuProfileId"
+                type="text"
+                formControlName="thuProfileId"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Inner Pack Size</span>
+            <div elixInputPrimary>
+              <input
+                id="innerPackSize"
+                type="text"
+                formControlName="innerPackSize"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Compartment Type Profile ID</span>
+            <div elixInputPrimary>
+              <input
+                id="compartmentTypeProfileId"
+                type="text"
+                formControlName="compartmentTypeProfileId"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="package__item__content-per">
+          <div>
+            <span>Hazaradous</span>
+            <div elixInputPrimary>
+              <mat-checkbox
+                formControlName="hazaradous"
                 class="example-margin"
-							              [checked]="false"
-							              [color]="'primary'" >
-
-							</mat-checkbox >
-						</div >
-					</div >
-					<div class="mt-20" >
-						<span >Mixable</span >
-						<div elixInputPrimary >
-							<mat-checkbox
+                [checked]="false"
+                [color]="'primary'"
+              >
+              </mat-checkbox>
+            </div>
+          </div>
+          <div class="mt-20">
+            <span>Mixable</span>
+            <div elixInputPrimary>
+              <mat-checkbox
                 formControlName="mixable"
                 class="example-margin"
-							              [checked]="false"
-							              [color]="'primary'" >
-
-							</mat-checkbox >
-						</div >
-					</div >
-					<div >
-						<span >Default Packaging</span >
-						<div elixInputPrimary >
-							<mat-checkbox
+                [checked]="false"
+                [color]="'primary'"
+              >
+              </mat-checkbox>
+            </div>
+          </div>
+          <div>
+            <span>Default Packaging</span>
+            <div elixInputPrimary>
+              <mat-checkbox
                 formControlName="defaultPck"
                 class="example-margin"
-							              [checked]="false"
-							              [color]="'primary'" >
-
-							</mat-checkbox >
-						</div >
-					</div >
-					<div >
-						<span >Unit Height</span >
-						<div elixInputPrimary >
-							<input id="unitHeight" type="text" formControlName="unitHeight" >
-						</div >
-					</div >
-					<div >
-						<span >Load Config Rule Rank</span >
-						<div elixInputPrimary >
-							<input id="loadConfigRuleRank" type="text" formControlName="loadConfigRuleRank" >
-						</div >
-					</div >
-					<div >
-						<span >Inner Pack Size UOM Code </span >
-						<div elixInputPrimary >
-							<input id="innerPckSizeUOMcode" type="text" formControlName="innerPckSizeUOMcode" >
-						</div >
-					</div >
-					<div >
-						<span >Category ID</span >
-						<div elixInputPrimary >
-							<input elixTooltipDirective class="overflow-ellipsis item-background__input" id="categoryId" type="text"
-							       formControlName="categoryId" >
-						</div >
-					</div >
-				</div >
-			</div >
-		</form >
-	</div >
-</div >
+                [checked]="false"
+                [color]="'primary'"
+              >
+              </mat-checkbox>
+            </div>
+          </div>
+          <div>
+            <span>Unit Height</span>
+            <div elixInputPrimary>
+              <input id="unitHeight" type="text" formControlName="unitHeight" />
+            </div>
+          </div>
+          <div>
+            <span>Load Config Rule Rank</span>
+            <div elixInputPrimary>
+              <input
+                id="loadConfigRuleRank"
+                type="text"
+                formControlName="loadConfigRuleRank"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Inner Pack Size UOM Code </span>
+            <div elixInputPrimary>
+              <input
+                id="innerPckSizeUOMcode"
+                type="text"
+                formControlName="innerPckSizeUOMcode"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Category ID</span>
+            <div elixInputPrimary>
+              <input
+                elixTooltipDirective
+                class="overflow-ellipsis item-background__input"
+                id="categoryId"
+                type="text"
+                formControlName="categoryId"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="all-frame">
+  <div class="flex">
+    <div class="flex-auto">
+      <elix-bread-crumb></elix-bread-crumb>
+    </div>
+    <div class="flex gap-2 all-frame__buttons">
+      <div *ngFor="let buttonConfig of data.buttons">
+        <button elixBtnPrimary (click)="navigateToEntity(buttonConfig.path)">
+          {{ buttonConfig.title }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,15 +1,23 @@
 <ng-container [matColumnDef]="field">
-  <mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef>{{name}}</mat-header-cell>
-  <mat-cell [class]="className" mat-cell *matCellDef="let element"
-            (click)="element.model['field'] !== '' && openTooltip(reference,element)"
-            #reference>
-		<textarea matInput
-              [(ngModel)]="element.model[field]"
-              [disabled]="element.editable"
-              [ngStyle]="{'color': 'black'}"></textarea>
+  <mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef>{{
+    name
+  }}</mat-header-cell>
+  <mat-cell
+    [class]="className"
+    mat-cell
+    *matCellDef="let element"
+    (click)="element.model['field'] !== '' && openTooltip(reference, element)"
+    #reference
+  >
+    <textarea
+      matInput
+      [(ngModel)]="element.model[field]"
+      [disabled]="element.editable"
+      [ngStyle]="{ color: 'black' }"
+    ></textarea>
 
     <ng-template #tooltipRef>
-      <elix-tooltip [width]="width">{{vars}}</elix-tooltip>
+      <elix-tooltip [width]="width">{{ vars }}</elix-tooltip>
     </ng-template>
   </mat-cell>
 </ng-container>

@@ -1,19 +1,20 @@
 <div *ngIf="repo" class="ml-2 text-white mt-2 pt-8 pl-7">
   <div>
     <div class="flex items-center">
-      <div class="flex-1">
-        Repository
-      </div>
+      <div class="flex-1">Repository</div>
       <div
         class="flex h-7 items-center justify-center vorkurt__background-button w-1/4 rounded-lg ml-2 mr-2 cursor-pointer"
-        [routerLink]="['/','new']">
+        [routerLink]="['/', 'new']"
+      >
         <button class="flex justify-center">
-          <mat-icon class="text-white vorkurt__size-icon" [svgIcon]="'fa_solid:book'">
+          <mat-icon
+            class="text-white vorkurt__size-icon"
+            [svgIcon]="'fa_solid:book'"
+          >
           </mat-icon>
           <div class="ml-2">
             <span>New</span>
           </div>
-
         </button>
       </div>
     </div>
@@ -25,16 +26,14 @@
           name="price"
           id="price"
           class="h-8 vorkurt__background-primary focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-          placeholder="Find a repository">
+          placeholder="Find a repository"
+        />
       </div>
     </div>
     <div *ngFor="let resp of repo" class="cursor-pointer">
       <div class="flex mt-2 mb-2 hover:underline" [routerLink]="resp.link">
-        <mat-icon
-          [svgIcon]="'fa_solid:user-circle'"></mat-icon>
-        <div class="ml-2 mt-0.5">
-          {{resp.owner}}/{{resp.repo}}
-        </div>
+        <mat-icon [svgIcon]="'fa_solid:user-circle'"></mat-icon>
+        <div class="ml-2 mt-0.5">{{ resp.owner }}/{{ resp.repo }}</div>
       </div>
     </div>
   </div>

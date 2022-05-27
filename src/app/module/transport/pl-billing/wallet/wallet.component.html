@@ -1,28 +1,25 @@
-<div class="flex flex-row " >
-	<div >
-		<elix-jumbotron *ngFor="let coin of dataCoins" class="p-5 " type="template" >
-			<div class="wallet__coin" >
-				<div class="flex justify-between" >
-					<span >name</span >
-					<span >
-							{{coin?.slug}}
-						</span >
-				</div >
-				<div class="flex justify-between" >
-					<span >Abrev</span >
-					<span >
-							{{coin.symbol}}
-						</span >
-				</div >
-			</div >
-			<div class="flex justify-between" >
-				<span >Price</span >
-				<span >{{coin.metrics.market_data.price_usd | number :'2.0'}}</span >
-			</div >
-		</elix-jumbotron >
-	</div >
-	<div class="p-5" >
-		to be
-
-	</div >
-</div >
+<div class="flex flex-row">
+  <div>
+    <elix-jumbotron *ngFor="let coin of dataCoins" class="p-5" type="template">
+      <div class="wallet__coin">
+        <div class="flex justify-between">
+          <span>name</span>
+          <span>
+            {{ coin?.slug }}
+          </span>
+        </div>
+        <div class="flex justify-between">
+          <span>Abrev</span>
+          <span>
+            {{ coin.symbol }}
+          </span>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <span>Price</span>
+        <span>{{ coin.metrics.market_data.price_usd | number: "2.0" }}</span>
+      </div>
+    </elix-jumbotron>
+  </div>
+  <div class="p-5">to be</div>
+</div>

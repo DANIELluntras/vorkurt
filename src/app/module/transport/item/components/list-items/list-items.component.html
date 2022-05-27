@@ -1,18 +1,41 @@
-<div *ngIf="dataSource.length>0" >
-	<elix-table [dataSource]="dataSource" >
+<div *ngIf="dataSource.length > 0">
+  <elix-table [dataSource]="dataSource">
+    <elix-column-text
+      className="categoryId"
+      [iconClass]="'elixir'"
+      field="categoryId"
+      name="Category "
+    ></elix-column-text>
+    <elix-column-text
+      className="hazaradous"
+      [iconClass]="'elixir'"
+      field="hazaradous"
+      name="Position"
+    ></elix-column-text>
+    <elix-column-text
+      className="mixable"
+      [iconClass]="'elixir'"
+      field="mixable"
+      name="Mixable "
+    ></elix-column-text>
 
-		<elix-column-text className="categoryId" [iconClass]="'elixir'" field="categoryId" name="Category "
-		></elix-column-text >
-		<elix-column-text className="hazaradous" [iconClass]="'elixir'" field="hazaradous" name="Position"
-		></elix-column-text >
-		<elix-column-text className="mixable" [iconClass]="'elixir'" field="mixable" name="Mixable " ></elix-column-text >
-
-		<elix-column-text className="unitVolume" [iconClass]="'elixir'" field="unitVolume"
-		                  name="Volume" ></elix-column-text >
-		<elix-column-area-text className="whe" name="Symbol" [iconClass]="'fa_solid:plus'"
-		                       field="description" ></elix-column-area-text >
-		<elix-column-icon-action className="action" name="Action"
-		                         field="action" iconClass="fa_solid:sort-down" ></elix-column-icon-action >
-
-	</elix-table >
-</div >
+    <elix-column-text
+      className="unitVolume"
+      [iconClass]="'elixir'"
+      field="unitVolume"
+      name="Volume"
+    ></elix-column-text>
+    <elix-column-area-text
+      className="whe"
+      name="Symbol"
+      [iconClass]="'fa_solid:plus'"
+      field="description"
+    ></elix-column-area-text>
+    <elix-column-icon-action
+      className="action"
+      name="Action"
+      field="action"
+      iconClass="fa_solid:sort-down"
+    ></elix-column-icon-action>
+  </elix-table>
+</div>

@@ -2,21 +2,21 @@
   <div>
     <div class="pb-5 vorkurt__border-bottom mb-6">
       <div class="text-2xl font-normal">
-        <p>
-          Create New Repository
-        </p>
+        <p>Create New Repository</p>
       </div>
       <div class="md:block xl:flex">
         <div class="vorkurt__header__width-container">
-          <p class="leading-4 racking-widest vorkurt__color-text-line vorkurt__text-size-secondary w-44 xl:w-full">
-            A repository contains all project files, including the revision history. Already have a project repository
-            elsewhere?
+          <p
+            class="leading-4 racking-widest vorkurt__color-text-line vorkurt__text-size-secondary w-44 xl:w-full"
+          >
+            A repository contains all project files, including the revision
+            history. Already have a project repository elsewhere?
           </p>
         </div>
-        <div class="xs:bg-blue-700 xl:w-1/12 text-blue-500 underline cursor-pointer racking-widest leading-4">
-          <p>
-            Import a repository
-          </p>
+        <div
+          class="xs:bg-blue-700 xl:w-1/12 text-blue-500 underline cursor-pointer racking-widest leading-4"
+        >
+          <p>Import a repository</p>
         </div>
       </div>
     </div>
@@ -24,23 +24,27 @@
       <div>
         <div class="flex flex-col">
           <span class="text-base m-0">Repository template</span>
-          <span class="vorkurt__color-text-line">Start your repository with a template repository's contents.</span>
+          <span class="vorkurt__color-text-line"
+            >Start your repository with a template repository's contents.</span
+          >
         </div>
-        <div class="pt-6"
-        >
+        <div class="pt-6">
           <div class="w-36" #button>
-            <button mat-raised-button (click)="openService($event)"
-                    class="w-max flex vorkurt__color-background vorkurt__color-text text-base font-normal
-               vorkurt__border-color vorkurt__header-newRepo-header
-          "
-                    style="padding-left: 2px;"
+            <button
+              mat-raised-button
+              (click)="openService($event)"
+              class="w-max flex vorkurt__color-background vorkurt__color-text text-base font-normal vorkurt__border-color vorkurt__header-newRepo-header"
+              style="padding-left: 2px"
             >
               <div class="flex mx-2">
                 <div>
-                  {{dataTemplate ? dataTemplate : 'No template'}}
+                  {{ dataTemplate ? dataTemplate : "No template" }}
                 </div>
                 <div>
-                  <mat-icon class="flex fixed" [svgIcon]="'fa_solid:sort-down'"></mat-icon>
+                  <mat-icon
+                    class="flex fixed"
+                    [svgIcon]="'fa_solid:sort-down'"
+                  ></mat-icon>
                 </div>
               </div>
             </button>

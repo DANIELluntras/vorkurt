@@ -1,157 +1,208 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>README.md</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" media="all" href="doc-style.css" />
-  <script src="doc-filelist.js"></script>
-  <script>
-    var relativeDir = "";
-    var thisFile = "README.md";
-    var defaultSidebar = true;
-  </script>
-  <script src="doc-script.js"></script>
+  <head>
+    <title>README.md</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" media="all" href="doc-style.css" />
+    <script src="doc-filelist.js"></script>
+    <script>
+      var relativeDir = "";
+      var thisFile = "README.md";
+      var defaultSidebar = true;
+    </script>
+    <script src="doc-script.js"></script>
+  </head>
+  <body>
+    <div id="sidebar_wrapper">
+      <div id="sidebar_switch">
+        <span class="tree">Files</span>
+        <span class="headings">Headings</span>
+      </div>
+      <div id="tree"></div>
+      <div id="headings">
+        <div class="heading h1">
+          <a href="#vorkurt">Vorkurt</a>
+        </div>
 
-</head>
-<body>
-  <div id="sidebar_wrapper">
-    <div id="sidebar_switch">
-      <span class="tree">Files</span>
-      <span class="headings">Headings</span>
+        <div class="heading h2">
+          <a href="#development-server">Development server</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#code-scaffolding">Code scaffolding</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#build">Build</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#running-unit-tests">Running unit tests</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#run-story-book">Run story book</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#angular-json">Angular Json</a>
+        </div>
+
+        <div class="heading h2">
+          <a href="#tsconfig.app.json">Tsconfig.app.json</a>
+        </div>
+
+        <div class="heading h4">
+          <a href="#strictpropertyinitialization-true"
+            >strictPropertyInitialization : true</a
+          >
+        </div>
+
+        <div class="heading h5">
+          <a href="#add-the-@hostlistener-and-@hostbinding"
+            >Add The @HostListener and @HostBinding</a
+          >
+        </div>
+
+        <div class="heading h3">
+          <a href="#for-run-test-cypress">For run test cypress</a>
+        </div>
+      </div>
     </div>
-    <div id="tree"></div>
-    <div id="headings">
-
-      <div class="heading h1">
-        <a href="#vorkurt">Vorkurt</a>
+    <div id="sidebar-toggle"></div>
+    <div id="container">
+      <div class="docs markdown">
+        <div class="pilwrap" id="vorkurt">
+          <h1>
+            <a href="#vorkurt" name="vorkurt" class="pilcrow"></a>
+            Vorkurt
+          </h1>
+        </div>
+        <p>
+          This project was generated with
+          <a href="https://github.com/angular/angular-cli">Angular CLI</a>
+          version 12.2.2.
+        </p>
+        <div class="pilwrap" id="development-server">
+          <h2>
+            <a
+              href="#development-server"
+              name="development-server"
+              class="pilcrow"
+            ></a>
+            Development server
+          </h2>
+        </div>
+        <p>
+          Run <code>ng serve</code> for a dev server. Navigate to
+          <code>http://localhost:4200/</code>. The app will automatically reload
+          if you change any of the source files.
+        </p>
+        <div class="pilwrap" id="code-scaffolding">
+          <h2>
+            <a
+              href="#code-scaffolding"
+              name="code-scaffolding"
+              class="pilcrow"
+            ></a>
+            Code scaffolding
+          </h2>
+        </div>
+        <p>
+          Run <code>ng generate component component-name</code> to generate a
+          new component. You can also use
+          <code
+            >ng generate
+            directive|pipe|service|class|guard|interface|enum|module</code
+          >.
+        </p>
+        <div class="pilwrap" id="build">
+          <h2>
+            <a href="#build" name="build" class="pilcrow"></a>
+            Build
+          </h2>
+        </div>
+        <p>
+          Run <code>ng build</code> to build the project. The build artifacts
+          will be stored in the <code>dist/</code> directory.
+        </p>
+        <div class="pilwrap" id="running-unit-tests">
+          <h2>
+            <a
+              href="#running-unit-tests"
+              name="running-unit-tests"
+              class="pilcrow"
+            ></a>
+            Running unit tests
+          </h2>
+        </div>
+        <p>
+          Run <code>ng test</code> to execute the unit tests via
+          <a href="https://karma-runner.github.io">Karma</a>.
+        </p>
+        <div class="pilwrap" id="run-story-book">
+          <h2>
+            <a href="#run-story-book" name="run-story-book" class="pilcrow"></a>
+            Run story book
+          </h2>
+        </div>
+        <p><code>npm run storybook</code></p>
+        <div class="pilwrap" id="angular-json">
+          <h2>
+            <a href="#angular-json" name="angular-json" class="pilcrow"></a>
+            Angular Json
+          </h2>
+        </div>
+        <p>Add all file from bootstrap such as style</p>
+        <div class="pilwrap" id="tsconfig.app.json">
+          <h2>
+            <a
+              href="#tsconfig.app.json"
+              name="tsconfig.app.json"
+              class="pilcrow"
+            ></a>
+            Tsconfig.app.json
+          </h2>
+        </div>
+        <p>I added some property new such as</p>
+        <div class="pilwrap" id="strictpropertyinitialization-true">
+          <h4>
+            <a
+              href="#strictpropertyinitialization-true"
+              name="strictpropertyinitialization-true"
+              class="pilcrow"
+            ></a>
+            strictPropertyInitialization : true
+          </h4>
+        </div>
+        <p>which we don't need it anymore to initialization evry property</p>
+        <div class="pilwrap" id="add-the-@hostlistener-and-@hostbinding">
+          <h5>
+            <a
+              href="#add-the-@hostlistener-and-@hostbinding"
+              name="add-the-@hostlistener-and-@hostbinding"
+              class="pilcrow"
+            ></a>
+            Add The @HostListener and @HostBinding
+          </h5>
+        </div>
+        <p>
+          With the HostBinding we can access either one element. e.g
+          @HostBinding('style.backgroundColor') backgroundColor: string =
+          'color' (must to be initialized this parameter)
+        </p>
+        <div class="pilwrap" id="for-run-test-cypress">
+          <h3>
+            <a
+              href="#for-run-test-cypress"
+              name="for-run-test-cypress"
+              class="pilcrow"
+            ></a>
+            For run test cypress
+          </h3>
+        </div>
+        <p>npm e2e</p>
       </div>
-
-      <div class="heading h2">
-        <a href="#development-server">Development server</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#code-scaffolding">Code scaffolding</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#build">Build</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#running-unit-tests">Running unit tests</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#run-story-book">Run story book</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#angular-json">Angular Json</a>
-      </div>
-
-      <div class="heading h2">
-        <a href="#tsconfig.app.json">Tsconfig.app.json</a>
-      </div>
-
-      <div class="heading h4">
-        <a href="#strictpropertyinitialization-true">strictPropertyInitialization : true</a>
-      </div>
-
-      <div class="heading h5">
-        <a href="#add-the-@hostlistener-and-@hostbinding">Add The @HostListener and @HostBinding</a>
-      </div>
-
-      <div class="heading h3">
-        <a href="#for-run-test-cypress">For run test cypress</a>
-      </div>
-
     </div>
-  </div>
-  <div id="sidebar-toggle"></div>
-  <div id="container">
-    <div class="docs markdown"><div class="pilwrap" id="vorkurt">
-  <h1>
-    <a href="#vorkurt" name="vorkurt" class="pilcrow"></a>
-Vorkurt
-  </h1>
-</div>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 12.2.2.</p>
-<div class="pilwrap" id="development-server">
-  <h2>
-    <a href="#development-server" name="development-server" class="pilcrow"></a>
-Development server
-  </h2>
-</div>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change
-any of the source files.</p>
-<div class="pilwrap" id="code-scaffolding">
-  <h2>
-    <a href="#code-scaffolding" name="code-scaffolding" class="pilcrow"></a>
-Code scaffolding
-  </h2>
-</div>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also
-use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<div class="pilwrap" id="build">
-  <h2>
-    <a href="#build" name="build" class="pilcrow"></a>
-Build
-  </h2>
-</div>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
-<div class="pilwrap" id="running-unit-tests">
-  <h2>
-    <a href="#running-unit-tests" name="running-unit-tests" class="pilcrow"></a>
-Running unit tests
-  </h2>
-</div>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<div class="pilwrap" id="run-story-book">
-  <h2>
-    <a href="#run-story-book" name="run-story-book" class="pilcrow"></a>
-Run story book
-  </h2>
-</div>
-<p><code>npm run storybook</code></p>
-<div class="pilwrap" id="angular-json">
-  <h2>
-    <a href="#angular-json" name="angular-json" class="pilcrow"></a>
-Angular Json
-  </h2>
-</div>
-<p>Add all file from bootstrap such as style</p>
-<div class="pilwrap" id="tsconfig.app.json">
-  <h2>
-    <a href="#tsconfig.app.json" name="tsconfig.app.json" class="pilcrow"></a>
-Tsconfig.app.json
-  </h2>
-</div>
-<p>I added some property new such as</p>
-<div class="pilwrap" id="strictpropertyinitialization-true">
-  <h4>
-    <a href="#strictpropertyinitialization-true" name="strictpropertyinitialization-true" class="pilcrow"></a>
-strictPropertyInitialization : true
-  </h4>
-</div>
-<p>which we don't need it anymore to initialization evry property</p>
-<div class="pilwrap" id="add-the-@hostlistener-and-@hostbinding">
-  <h5>
-    <a href="#add-the-@hostlistener-and-@hostbinding" name="add-the-@hostlistener-and-@hostbinding" class="pilcrow"></a>
-Add The @HostListener and @HostBinding
-  </h5>
-</div>
-<p>With the HostBinding we can access either one element.
-e.g
-@HostBinding('style.backgroundColor') backgroundColor: string = 'color' (must to be initialized this parameter)</p>
-<div class="pilwrap" id="for-run-test-cypress">
-  <h3>
-    <a href="#for-run-test-cypress" name="for-run-test-cypress" class="pilcrow"></a>
-For run test cypress
-  </h3>
-</div>
-<p>npm e2e</p>
-</div>
-  </div>
-</body>
+  </body>
 </html>

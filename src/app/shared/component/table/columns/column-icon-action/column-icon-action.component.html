@@ -1,11 +1,16 @@
-<ng-container [matColumnDef]="field" >
-	<mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef >{{name}}</mat-header-cell >
-	<mat-cell [class]="className" mat-cell *matCellDef="let element" >
-		<ng-container *ngFor="let action of element.actions">
-			<button mat-button (click)="action.method(element)" [class]="action.classCss">
-
-				<mat-icon  [svgIcon]="action.iconClass" ></mat-icon >
-			</button >
-		</ng-container >
-	</mat-cell >
-</ng-container >
+<ng-container [matColumnDef]="field">
+  <mat-header-cell [class]="className" mat-header-cell *matHeaderCellDef>{{
+    name
+  }}</mat-header-cell>
+  <mat-cell [class]="className" mat-cell *matCellDef="let element">
+    <ng-container *ngFor="let action of element.actions">
+      <button
+        mat-button
+        (click)="action.method(element)"
+        [class]="action.classCss"
+      >
+        <mat-icon [svgIcon]="action.iconClass"></mat-icon>
+      </button>
+    </ng-container>
+  </mat-cell>
+</ng-container>
