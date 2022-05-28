@@ -5,9 +5,11 @@ import {
   Car,
   Consignee,
   DataSourceMaterialTable,
+  Driver,
   PackageAddress,
   TypeBox,
 } from 'src/app/shared/utils/interfaces';
+import { AddedDriverService } from '../../common/utils/services/added-driver.service';
 
 @Component({
   selector: 'elix-added-driver',
@@ -21,8 +23,9 @@ export class AddedDriverComponent implements OnInit {
   public carId: number = null;
 
   constructor(
-    private _spinnerStateService: SpinnerStateService,
-    private _fb: FormBuilder
+    private readonly _addedDriver: AddedDriverService,
+    private readonly _spinnerStateService: SpinnerStateService,
+    private readonly _fb: FormBuilder
   ) {}
 
   get cars(): FormArray {
@@ -41,7 +44,9 @@ export class AddedDriverComponent implements OnInit {
 
   public sendValues(): void {
     this._setDataInCarForm();
-    console.log(this.driverForm.value);
+    this._addedDriver
+      .addedDriver(this.driverForm.value)
+      .subscribe((resp: Driver) => {});
   }
 
   public addCar() {
@@ -128,7 +133,7 @@ export class AddedDriverComponent implements OnInit {
   private _emptyPackage() {
     return {
       note: 'TEst',
-      typeBox: this._fb.group({ envelop: <unknown>'envelop' } as TypeBox),
+      typeBox: this._fb.group({ envelop: false } as TypeBox),
       refoundType: this._fb.group({ toRecipient: false }),
       packageAddress: this._fb.group(this._initPackageAddress()),
       consignee: this._fb.group(this._initCarGroup()),
