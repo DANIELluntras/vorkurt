@@ -4,6 +4,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+### StackBlitz
+<a href="https://stackblitz.com/github//Vorkurt/zilpa">
+  <img
+    src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
+    alt="Open in StackBlitz"
+  />
+</a>
+
 ### Install application
 
 Run `npm ci`
