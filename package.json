@@ -1,6 +1,6 @@
 {
   "name": "vorkurt",
-  "version": "1.6.3",
+  "version": "1.7.0",
   "engines": {
     "node": ">=14",
     "npm": ">=7"
