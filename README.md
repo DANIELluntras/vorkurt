@@ -12,6 +12,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   />
 </a>
 
+### GitPod
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/Vorkurt/zilpa>)
+
+
 ### Install application
 
 Run `npm ci`
