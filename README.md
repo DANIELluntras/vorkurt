@@ -6,6 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Patiently cross the montains
 
+
+### GitPod
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Vorkurt/zilpa)
+
 ### StackBlitz
 <a href="https://stackblitz.com/github//Vorkurt/zilpa">
   <img
@@ -13,11 +18,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     alt="Open in StackBlitz"
   />
 </a>
-
-### GitPod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Vorkurt/zilpa)
-
 
 ### Install application
 
