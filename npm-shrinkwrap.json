@@ -1,12 +1,12 @@
 {
   "name": "vorkurt",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "vorkurt",
-      "version": "1.8.0",
+      "version": "1.9.0",
       "dependencies": {
         "@angular/animations": "^13.1.0",
         "@angular/cdk": "^12.2.11",
